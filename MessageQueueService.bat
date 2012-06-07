@@ -1,0 +1,1 @@
+"C:\Program Files\Microsoft SDKs\Windows\v6.0A\Bin\svcutil.exe" /t:code "http://local.services.hamptondwell.com/MessageQueueService.svc?wsdl" /ct:"System.Collections.Generic.List`1" /noConfig /targetClientVersion:Version35 /out:"HamptonDwell.logic\Services\MessageQueueService.cs" /n:"*,EBS.HamptonDwell.Web.Logic.Services.MessageQueues"

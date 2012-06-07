@@ -1,0 +1,105 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBS.HamptonDwell.Logic", "HamptonDwell.logic\EBS.HamptonDwell.Logic.csproj", "{69373A96-1595-4578-8083-96B80727827F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "local.services.hamptondwell.com", "http://local.services.hamptondwell.com", "{EA7D9EB5-7CA2-4AC3-84FD-0E1DA2DC8A0A}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{7EA64349-683E-411E-92F8-1055802B404D}|EBS.HamptonDwell.Services.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/local.services.hamptondwell.com"
+		Debug.AspNetCompiler.PhysicalPath = "HamptonDwell.Services\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\local.services.hamptondwell.com\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/local.services.hamptondwell.com"
+		Release.AspNetCompiler.PhysicalPath = "HamptonDwell.Services\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\local.services.hamptondwell.com\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\HamptonDwell.Services\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBS.HamptonDwell.Services", "HamptonDwell.Services.Logic\EBS.HamptonDwell.Services.csproj", "{7EA64349-683E-411E-92F8-1055802B404D}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "local.admin.hamptondwell.com", "http://local.admin.hamptondwell.com", "{84ECD615-5CD7-4FC5-988E-30150A783179}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{69373A96-1595-4578-8083-96B80727827F}|SDMAC.Web.Logic.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/local.admin.hamptondwell.com"
+		Debug.AspNetCompiler.PhysicalPath = "HamptonDwell.admin\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\local.admin.hamptondwell.com\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/local.admin.hamptondwell.com"
+		Release.AspNetCompiler.PhysicalPath = "HamptonDwell.admin\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\local.admin.hamptondwell.com\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\HamptonDwell.admin\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "local.hamptondwell.com", "http://local.hamptondwell.com", "{C756F3F1-766A-4566-B329-98EEA35C82FF}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{69373A96-1595-4578-8083-96B80727827F}|EBS.HamptonDwell.Web.Logic.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/local.hamptondwell.com"
+		Debug.AspNetCompiler.PhysicalPath = "HamptonDwell.web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\local.hamptondwell.com\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/local.hamptondwell.com"
+		Release.AspNetCompiler.PhysicalPath = "HamptonDwell.web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\local.hamptondwell.com\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\HamptonDwell.web\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69373A96-1595-4578-8083-96B80727827F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69373A96-1595-4578-8083-96B80727827F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69373A96-1595-4578-8083-96B80727827F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69373A96-1595-4578-8083-96B80727827F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7D9EB5-7CA2-4AC3-84FD-0E1DA2DC8A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7D9EB5-7CA2-4AC3-84FD-0E1DA2DC8A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7D9EB5-7CA2-4AC3-84FD-0E1DA2DC8A0A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7D9EB5-7CA2-4AC3-84FD-0E1DA2DC8A0A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7EA64349-683E-411E-92F8-1055802B404D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA64349-683E-411E-92F8-1055802B404D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA64349-683E-411E-92F8-1055802B404D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA64349-683E-411E-92F8-1055802B404D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84ECD615-5CD7-4FC5-988E-30150A783179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84ECD615-5CD7-4FC5-988E-30150A783179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84ECD615-5CD7-4FC5-988E-30150A783179}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{84ECD615-5CD7-4FC5-988E-30150A783179}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C756F3F1-766A-4566-B329-98EEA35C82FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C756F3F1-766A-4566-B329-98EEA35C82FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C756F3F1-766A-4566-B329-98EEA35C82FF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C756F3F1-766A-4566-B329-98EEA35C82FF}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

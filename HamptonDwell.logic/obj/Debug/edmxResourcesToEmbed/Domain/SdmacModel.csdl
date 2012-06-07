@@ -1,0 +1,2749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sdmac_2010Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="sdmac_2010Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AccountAccountCategories" EntityType="sdmac_2010Model.AccountAccountCategory" />
+    <EntitySet Name="AccountCategories" EntityType="sdmac_2010Model.AccountCategory" />
+    <EntitySet Name="Accounts" EntityType="sdmac_2010Model.Account" />
+    <EntitySet Name="AccountTypes" EntityType="sdmac_2010Model.AccountType" />
+    <EntitySet Name="Addresses" EntityType="sdmac_2010Model.Address" />
+    <EntitySet Name="AlbumImages" EntityType="sdmac_2010Model.AlbumImage" />
+    <EntitySet Name="Albums" EntityType="sdmac_2010Model.Album" />
+    <EntitySet Name="Alerts" EntityType="sdmac_2010Model.Alert" />
+    <EntitySet Name="AlertStatusTypes" EntityType="sdmac_2010Model.AlertStatusType" />
+    <EntitySet Name="AlertTemplates" EntityType="sdmac_2010Model.AlertTemplate" />
+    <EntitySet Name="DistributionDocuments" EntityType="sdmac_2010Model.DistributionDocument" />
+    <EntitySet Name="DistributionHistories" EntityType="sdmac_2010Model.DistributionHistory" />
+    <EntitySet Name="DistributionLists" EntityType="sdmac_2010Model.DistributionList" />
+    <EntitySet Name="Distributions" EntityType="sdmac_2010Model.Distribution" />
+    <EntitySet Name="DistributionTypes" EntityType="sdmac_2010Model.DistributionType" />
+    <EntitySet Name="Documents" EntityType="sdmac_2010Model.Document" />
+    <EntitySet Name="DocumentTypes" EntityType="sdmac_2010Model.DocumentType" />
+    <EntitySet Name="EventDocuments" EntityType="sdmac_2010Model.EventDocument" />
+    <EntitySet Name="EventEventReservationTypes" EntityType="sdmac_2010Model.EventEventReservationType" />
+    <EntitySet Name="EventReservationGuests" EntityType="sdmac_2010Model.EventReservationGuest" />
+    <EntitySet Name="EventReservations" EntityType="sdmac_2010Model.EventReservation" />
+    <EntitySet Name="EventReservationStatus" EntityType="sdmac_2010Model.EventReservationStatu" />
+    <EntitySet Name="EventReservationTypes" EntityType="sdmac_2010Model.EventReservationType" />
+    <EntitySet Name="Events" EntityType="sdmac_2010Model.Event" />
+    <EntitySet Name="EventStatusTypes" EntityType="sdmac_2010Model.EventStatusType" />
+    <EntitySet Name="GuestStatus" EntityType="sdmac_2010Model.GuestStatu" />
+    <EntitySet Name="HotLists" EntityType="sdmac_2010Model.HotList" />
+    <EntitySet Name="MessageFormatTypes" EntityType="sdmac_2010Model.MessageFormatType" />
+    <EntitySet Name="Newsletters" EntityType="sdmac_2010Model.Newsletter" />
+    <EntitySet Name="NewsTypes" EntityType="sdmac_2010Model.NewsType" />
+    <EntitySet Name="PageTemplates" EntityType="sdmac_2010Model.PageTemplate" />
+    <EntitySet Name="PaymentStatus" EntityType="sdmac_2010Model.PaymentStatu" />
+    <EntitySet Name="PaymentTransactions" EntityType="sdmac_2010Model.PaymentTransaction" />
+    <EntitySet Name="PaymentTransactionTypes" EntityType="sdmac_2010Model.PaymentTransactionType" />
+    <EntitySet Name="Photos" EntityType="sdmac_2010Model.Photo" />
+    <EntitySet Name="Products" EntityType="sdmac_2010Model.Product" />
+    <EntitySet Name="RewriteRules" EntityType="sdmac_2010Model.RewriteRule" />
+    <EntitySet Name="SalesOrderDetails" EntityType="sdmac_2010Model.SalesOrderDetail" />
+    <EntitySet Name="SalesOrders" EntityType="sdmac_2010Model.SalesOrder" />
+    <EntitySet Name="SalesOrderStatusTypes" EntityType="sdmac_2010Model.SalesOrderStatusType" />
+    <EntitySet Name="States" EntityType="sdmac_2010Model.State" />
+    <EntitySet Name="SystemConstants" EntityType="sdmac_2010Model.SystemConstant" />
+    <EntitySet Name="SystemTransactions" EntityType="sdmac_2010Model.SystemTransaction" />
+    <EntitySet Name="SystemTransactionTypes" EntityType="sdmac_2010Model.SystemTransactionType" />
+    <EntitySet Name="UserRights" EntityType="sdmac_2010Model.UserRight" />
+    <EntitySet Name="UserRoles" EntityType="sdmac_2010Model.UserRole" />
+    <EntitySet Name="Users" EntityType="sdmac_2010Model.User" />
+    <EntitySet Name="UserUserRoles" EntityType="sdmac_2010Model.UserUserRole" />
+    <EntitySet Name="VirtualPages" EntityType="sdmac_2010Model.VirtualPage" />
+    <AssociationSet Name="FK_AccountAccountCategories_AccountCategories" Association="sdmac_2010Model.FK_AccountAccountCategories_AccountCategories">
+      <End Role="AccountCategory" EntitySet="AccountCategories" />
+      <End Role="AccountAccountCategory" EntitySet="AccountAccountCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccountAccountCategories_Accounts" Association="sdmac_2010Model.FK_AccountAccountCategories_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="AccountAccountCategory" EntitySet="AccountAccountCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccountAccountCategories_Users" Association="sdmac_2010Model.FK_AccountAccountCategories_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="AccountAccountCategory" EntitySet="AccountAccountCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccountAccountCategories_Users1" Association="sdmac_2010Model.FK_AccountAccountCategories_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="AccountAccountCategory" EntitySet="AccountAccountCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AccountCategories_AccountCategories" Association="sdmac_2010Model.FK_AccountCategories_AccountCategories">
+      <End Role="AccountCategory" EntitySet="AccountCategories" />
+      <End Role="AccountCategory1" EntitySet="AccountCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_AccountTypes" Association="sdmac_2010Model.FK_Accounts_AccountTypes">
+      <End Role="AccountType" EntitySet="AccountTypes" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_PaymentStatus" Association="sdmac_2010Model.FK_Accounts_PaymentStatus">
+      <End Role="PaymentStatu" EntitySet="PaymentStatus" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_States" Association="sdmac_2010Model.FK_Accounts_States">
+      <End Role="State" EntitySet="States" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_Users" Association="sdmac_2010Model.FK_Accounts_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_Users1" Association="sdmac_2010Model.FK_Accounts_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Account" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Addresses_Accounts" Association="sdmac_2010Model.FK_Addresses_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alerts_Accounts" Association="sdmac_2010Model.FK_Alerts_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Alert" EntitySet="Alerts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionList_Accounts" Association="sdmac_2010Model.FK_DistributionList_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="DistributionList" EntitySet="DistributionLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventReservations_Accounts" Association="sdmac_2010Model.FK_EventReservations_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="EventReservation" EntitySet="EventReservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentTransactions_Accounts" Association="sdmac_2010Model.FK_PaymentTransactions_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="PaymentTransaction" EntitySet="PaymentTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrders_Accounts" Association="sdmac_2010Model.FK_SalesOrders_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="SalesOrder" EntitySet="SalesOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemTransactions_Accounts" Association="sdmac_2010Model.FK_SystemTransactions_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="SystemTransaction" EntitySet="SystemTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Accounts" Association="sdmac_2010Model.FK_Users_Accounts">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTemplates_AccountTypes" Association="sdmac_2010Model.FK_AlertTemplates_AccountTypes">
+      <End Role="AccountType" EntitySet="AccountTypes" />
+      <End Role="AlertTemplate" EntitySet="AlertTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Addresses_States" Association="sdmac_2010Model.FK_Addresses_States">
+      <End Role="State" EntitySet="States" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Addresses_Users" Association="sdmac_2010Model.FK_Addresses_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Addresses_Users1" Association="sdmac_2010Model.FK_Addresses_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Events_Addresses" Association="sdmac_2010Model.FK_Events_Addresses">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrders_Addresses" Association="sdmac_2010Model.FK_SalesOrders_Addresses">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="SalesOrder" EntitySet="SalesOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlbumImages_Albums" Association="sdmac_2010Model.FK_AlbumImages_Albums">
+      <End Role="Album" EntitySet="Albums" />
+      <End Role="AlbumImage" EntitySet="AlbumImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlbumImages_Photos" Association="sdmac_2010Model.FK_AlbumImages_Photos">
+      <End Role="Photo" EntitySet="Photos" />
+      <End Role="AlbumImage" EntitySet="AlbumImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemTransactions_Albums" Association="sdmac_2010Model.FK_SystemTransactions_Albums">
+      <End Role="Album" EntitySet="Albums" />
+      <End Role="SystemTransaction" EntitySet="SystemTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alerts_AlertStatusTypes" Association="sdmac_2010Model.FK_Alerts_AlertStatusTypes">
+      <End Role="AlertStatusType" EntitySet="AlertStatusTypes" />
+      <End Role="Alert" EntitySet="Alerts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alerts_EventReservations" Association="sdmac_2010Model.FK_Alerts_EventReservations">
+      <End Role="EventReservation" EntitySet="EventReservations" />
+      <End Role="Alert" EntitySet="Alerts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alerts_SalesOrders" Association="sdmac_2010Model.FK_Alerts_SalesOrders">
+      <End Role="SalesOrder" EntitySet="SalesOrders" />
+      <End Role="Alert" EntitySet="Alerts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alerts_Users" Association="sdmac_2010Model.FK_Alerts_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Alert" EntitySet="Alerts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alerts_Users1" Association="sdmac_2010Model.FK_Alerts_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Alert" EntitySet="Alerts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemTransactions_Alerts" Association="sdmac_2010Model.FK_SystemTransactions_Alerts">
+      <End Role="Alert" EntitySet="Alerts" />
+      <End Role="SystemTransaction" EntitySet="SystemTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionHistory_AlertStatusTypes" Association="sdmac_2010Model.FK_DistributionHistory_AlertStatusTypes">
+      <End Role="AlertStatusType" EntitySet="AlertStatusTypes" />
+      <End Role="DistributionHistory" EntitySet="DistributionHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTemplates_AlertTemplates" Association="sdmac_2010Model.FK_AlertTemplates_AlertTemplates">
+      <End Role="AlertTemplate" EntitySet="AlertTemplates" />
+      <End Role="AlertTemplate1" EntitySet="AlertTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTemplates_EventReservationStatus" Association="sdmac_2010Model.FK_AlertTemplates_EventReservationStatus">
+      <End Role="EventReservationStatu" EntitySet="EventReservationStatus" />
+      <End Role="AlertTemplate" EntitySet="AlertTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTemplates_GuestStatus" Association="sdmac_2010Model.FK_AlertTemplates_GuestStatus">
+      <End Role="GuestStatu" EntitySet="GuestStatus" />
+      <End Role="AlertTemplate" EntitySet="AlertTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTemplates_MessageFormatTypes" Association="sdmac_2010Model.FK_AlertTemplates_MessageFormatTypes">
+      <End Role="MessageFormatType" EntitySet="MessageFormatTypes" />
+      <End Role="AlertTemplate" EntitySet="AlertTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTemplates_SalesOrderStatusTypes" Association="sdmac_2010Model.FK_AlertTemplates_SalesOrderStatusTypes">
+      <End Role="SalesOrderStatusType" EntitySet="SalesOrderStatusTypes" />
+      <End Role="AlertTemplate" EntitySet="AlertTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTemplates_Users" Association="sdmac_2010Model.FK_AlertTemplates_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="AlertTemplate" EntitySet="AlertTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AlertTemplates_Users1" Association="sdmac_2010Model.FK_AlertTemplates_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="AlertTemplate" EntitySet="AlertTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionDocuments_Distributions" Association="sdmac_2010Model.FK_DistributionDocuments_Distributions">
+      <End Role="Distribution" EntitySet="Distributions" />
+      <End Role="DistributionDocument" EntitySet="DistributionDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionDocuments_Documents" Association="sdmac_2010Model.FK_DistributionDocuments_Documents">
+      <End Role="Document" EntitySet="Documents" />
+      <End Role="DistributionDocument" EntitySet="DistributionDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionDocuments_Users" Association="sdmac_2010Model.FK_DistributionDocuments_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="DistributionDocument" EntitySet="DistributionDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionDocuments_Users1" Association="sdmac_2010Model.FK_DistributionDocuments_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="DistributionDocument" EntitySet="DistributionDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionHistory_DistributionList" Association="sdmac_2010Model.FK_DistributionHistory_DistributionList">
+      <End Role="DistributionList" EntitySet="DistributionLists" />
+      <End Role="DistributionHistory" EntitySet="DistributionHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionHistory_Distributions" Association="sdmac_2010Model.FK_DistributionHistory_Distributions">
+      <End Role="Distribution" EntitySet="Distributions" />
+      <End Role="DistributionHistory" EntitySet="DistributionHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionList_Users" Association="sdmac_2010Model.FK_DistributionList_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="DistributionList" EntitySet="DistributionLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistributionList_Users1" Association="sdmac_2010Model.FK_DistributionList_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="DistributionList" EntitySet="DistributionLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Distributions_Distributions" Association="sdmac_2010Model.FK_Distributions_Distributions">
+      <End Role="Distribution" EntitySet="Distributions" />
+      <End Role="Distribution1" EntitySet="Distributions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Distributions_DistributionTypes" Association="sdmac_2010Model.FK_Distributions_DistributionTypes">
+      <End Role="DistributionType" EntitySet="DistributionTypes" />
+      <End Role="Distribution" EntitySet="Distributions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Distributions_Events" Association="sdmac_2010Model.FK_Distributions_Events">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="Distribution" EntitySet="Distributions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Distributions_Users" Association="sdmac_2010Model.FK_Distributions_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Distribution" EntitySet="Distributions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Distributions_Users1" Association="sdmac_2010Model.FK_Distributions_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Distribution" EntitySet="Distributions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_DocumentType" Association="sdmac_2010Model.FK_Documents_DocumentType">
+      <End Role="DocumentType" EntitySet="DocumentTypes" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Users" Association="sdmac_2010Model.FK_Documents_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Users1" Association="sdmac_2010Model.FK_Documents_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventDocuments_Documents" Association="sdmac_2010Model.FK_EventDocuments_Documents">
+      <End Role="Document" EntitySet="Documents" />
+      <End Role="EventDocument" EntitySet="EventDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventDocuments_Events" Association="sdmac_2010Model.FK_EventDocuments_Events">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EventDocument" EntitySet="EventDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventDocuments_Users" Association="sdmac_2010Model.FK_EventDocuments_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="EventDocument" EntitySet="EventDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventDocuments_Users1" Association="sdmac_2010Model.FK_EventDocuments_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="EventDocument" EntitySet="EventDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventEventReservationTypes_EventReservationTypes" Association="sdmac_2010Model.FK_EventEventReservationTypes_EventReservationTypes">
+      <End Role="EventReservationType" EntitySet="EventReservationTypes" />
+      <End Role="EventEventReservationType" EntitySet="EventEventReservationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventEventReservationTypes_Events" Association="sdmac_2010Model.FK_EventEventReservationTypes_Events">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EventEventReservationType" EntitySet="EventEventReservationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventEventReservationTypes_Users" Association="sdmac_2010Model.FK_EventEventReservationTypes_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="EventEventReservationType" EntitySet="EventEventReservationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventEventReservationTypes_Users1" Association="sdmac_2010Model.FK_EventEventReservationTypes_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="EventEventReservationType" EntitySet="EventEventReservationTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventReservationGuests_EventReservations" Association="sdmac_2010Model.FK_EventReservationGuests_EventReservations">
+      <End Role="EventReservation" EntitySet="EventReservations" />
+      <End Role="EventReservationGuest" EntitySet="EventReservationGuests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventReservationGuests_GuestStatus" Association="sdmac_2010Model.FK_EventReservationGuests_GuestStatus">
+      <End Role="GuestStatu" EntitySet="GuestStatus" />
+      <End Role="EventReservationGuest" EntitySet="EventReservationGuests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventReservations_EventReservationStatus" Association="sdmac_2010Model.FK_EventReservations_EventReservationStatus">
+      <End Role="EventReservationStatu" EntitySet="EventReservationStatus" />
+      <End Role="EventReservation" EntitySet="EventReservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventReservations_EventReservationTypes" Association="sdmac_2010Model.FK_EventReservations_EventReservationTypes">
+      <End Role="EventReservationType" EntitySet="EventReservationTypes" />
+      <End Role="EventReservation" EntitySet="EventReservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventReservations_Events" Association="sdmac_2010Model.FK_EventReservations_Events">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="EventReservation" EntitySet="EventReservations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentTransactions_EventReservations" Association="sdmac_2010Model.FK_PaymentTransactions_EventReservations">
+      <End Role="EventReservation" EntitySet="EventReservations" />
+      <End Role="PaymentTransaction" EntitySet="PaymentTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GuestStatus_EventReservationTypes" Association="sdmac_2010Model.FK_GuestStatus_EventReservationTypes">
+      <End Role="EventReservationType" EntitySet="EventReservationTypes" />
+      <End Role="GuestStatu" EntitySet="GuestStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Events_EventStatusTypes" Association="sdmac_2010Model.FK_Events_EventStatusTypes">
+      <End Role="EventStatusType" EntitySet="EventStatusTypes" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Events_Users" Association="sdmac_2010Model.FK_Events_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Events_Users1" Association="sdmac_2010Model.FK_Events_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Event" EntitySet="Events" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Newsletters_Events" Association="sdmac_2010Model.FK_Newsletters_Events">
+      <End Role="Event" EntitySet="Events" />
+      <End Role="Newsletter" EntitySet="Newsletters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HotList_Users" Association="sdmac_2010Model.FK_HotList_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="HotList" EntitySet="HotLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HotList_Users1" Association="sdmac_2010Model.FK_HotList_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="HotList" EntitySet="HotLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Newsletters_NewsTypes" Association="sdmac_2010Model.FK_Newsletters_NewsTypes">
+      <End Role="NewsType" EntitySet="NewsTypes" />
+      <End Role="Newsletter" EntitySet="Newsletters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Newsletters_Users" Association="sdmac_2010Model.FK_Newsletters_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Newsletter" EntitySet="Newsletters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Newsletters_Users1" Association="sdmac_2010Model.FK_Newsletters_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Newsletter" EntitySet="Newsletters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PageTemplate_Users" Association="sdmac_2010Model.FK_PageTemplate_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="PageTemplate" EntitySet="PageTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PageTemplate_Users1" Association="sdmac_2010Model.FK_PageTemplate_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="PageTemplate" EntitySet="PageTemplates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPage_PageTemplate" Association="sdmac_2010Model.FK_VirtualPage_PageTemplate">
+      <End Role="PageTemplate" EntitySet="PageTemplates" />
+      <End Role="VirtualPage" EntitySet="VirtualPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentTransactions_PaymentTransactionTypes" Association="sdmac_2010Model.FK_PaymentTransactions_PaymentTransactionTypes">
+      <End Role="PaymentTransactionType" EntitySet="PaymentTransactionTypes" />
+      <End Role="PaymentTransaction" EntitySet="PaymentTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemTransactions_PaymentTransactions" Association="sdmac_2010Model.FK_SystemTransactions_PaymentTransactions">
+      <End Role="PaymentTransaction" EntitySet="PaymentTransactions" />
+      <End Role="SystemTransaction" EntitySet="SystemTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Users" Association="sdmac_2010Model.FK_Products_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Users1" Association="sdmac_2010Model.FK_Products_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderDetails_Products" Association="sdmac_2010Model.FK_SalesOrderDetails_Products">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RewriteRules_Users" Association="sdmac_2010Model.FK_RewriteRules_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="RewriteRule" EntitySet="RewriteRules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RewriteRules_Users1" Association="sdmac_2010Model.FK_RewriteRules_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="RewriteRule" EntitySet="RewriteRules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderDetails_SalesOrders" Association="sdmac_2010Model.FK_SalesOrderDetails_SalesOrders">
+      <End Role="SalesOrder" EntitySet="SalesOrders" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderDetails_Users" Association="sdmac_2010Model.FK_SalesOrderDetails_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrderDetails_Users1" Association="sdmac_2010Model.FK_SalesOrderDetails_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrders_SalesOrderStatusTypes" Association="sdmac_2010Model.FK_SalesOrders_SalesOrderStatusTypes">
+      <End Role="SalesOrderStatusType" EntitySet="SalesOrderStatusTypes" />
+      <End Role="SalesOrder" EntitySet="SalesOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrders_Users" Association="sdmac_2010Model.FK_SalesOrders_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SalesOrder" EntitySet="SalesOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesOrders_Users1" Association="sdmac_2010Model.FK_SalesOrders_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SalesOrder" EntitySet="SalesOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemConstants_Users" Association="sdmac_2010Model.FK_SystemConstants_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SystemConstant" EntitySet="SystemConstants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemConstants_Users1" Association="sdmac_2010Model.FK_SystemConstants_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SystemConstant" EntitySet="SystemConstants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemTransactions_SystemTransactionTypes" Association="sdmac_2010Model.FK_SystemTransactions_SystemTransactionTypes">
+      <End Role="SystemTransactionType" EntitySet="SystemTransactionTypes" />
+      <End Role="SystemTransaction" EntitySet="SystemTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemTransactions_Users" Association="sdmac_2010Model.FK_SystemTransactions_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SystemTransaction" EntitySet="SystemTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemTransactions_Users1" Association="sdmac_2010Model.FK_SystemTransactions_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SystemTransaction" EntitySet="SystemTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRights_Users" Association="sdmac_2010Model.FK_UserRights_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserRight" EntitySet="UserRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRights_Users1" Association="sdmac_2010Model.FK_UserRights_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserRight" EntitySet="UserRights" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserUserRoles_UserRoles" Association="sdmac_2010Model.FK_UserUserRoles_UserRoles">
+      <End Role="UserRole" EntitySet="UserRoles" />
+      <End Role="UserUserRole" EntitySet="UserUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users" Association="sdmac_2010Model.FK_Users_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="User1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users1" Association="sdmac_2010Model.FK_Users_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="User1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserUserRoles_Users" Association="sdmac_2010Model.FK_UserUserRoles_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserUserRole" EntitySet="UserUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserUserRoles_Users1" Association="sdmac_2010Model.FK_UserUserRoles_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserUserRole" EntitySet="UserUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserUserRoles_Users2" Association="sdmac_2010Model.FK_UserUserRoles_Users2">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserUserRole" EntitySet="UserUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPage_Users" Association="sdmac_2010Model.FK_VirtualPage_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="VirtualPage" EntitySet="VirtualPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPage_Users1" Association="sdmac_2010Model.FK_VirtualPage_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="VirtualPage" EntitySet="VirtualPages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPage_VirtualPage" Association="sdmac_2010Model.FK_VirtualPage_VirtualPage">
+      <End Role="VirtualPage" EntitySet="VirtualPages" />
+      <End Role="VirtualPage1" EntitySet="VirtualPages" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AccountAccountCategory">
+    <Key>
+      <PropertyRef Name="AccountAccountCategoryID" />
+    </Key>
+    <Property Name="AccountAccountCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account_AccountID" Type="Int32" Nullable="false" />
+    <Property Name="Category_AccountCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedOn_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="AccountCategory" Relationship="sdmac_2010Model.FK_AccountAccountCategories_AccountCategories" FromRole="AccountAccountCategory" ToRole="AccountCategory" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_AccountAccountCategories_Accounts" FromRole="AccountAccountCategory" ToRole="Account" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_AccountAccountCategories_Users" FromRole="AccountAccountCategory" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_AccountAccountCategories_Users1" FromRole="AccountAccountCategory" ToRole="User" />
+  </EntityType>
+  <EntityType Name="AccountCategory">
+    <Key>
+      <PropertyRef Name="AccountCategoryID" />
+    </Key>
+    <Property Name="AccountCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberOf_AccountCategoryID" Type="Int32" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="Alias" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AccountAccountCategories" Relationship="sdmac_2010Model.FK_AccountAccountCategories_AccountCategories" FromRole="AccountCategory" ToRole="AccountAccountCategory" />
+    <NavigationProperty Name="AccountCategories1" Relationship="sdmac_2010Model.FK_AccountCategories_AccountCategories" FromRole="AccountCategory" ToRole="AccountCategory1" />
+    <NavigationProperty Name="AccountCategory1" Relationship="sdmac_2010Model.FK_AccountCategories_AccountCategories" FromRole="AccountCategory1" ToRole="AccountCategory" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type_AccountTypeID" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Company" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="State_StateID" Type="Int32" />
+    <Property Name="Zip" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="RenewalDate" Type="DateTime" />
+    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="WebURL" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyLogo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PaymentStatus_PaymentStatusID" Type="Int32" />
+    <Property Name="ShowOnWebSite" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="CreatedBy_UserID" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" />
+    <Property Name="ExternalID" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="AccountAccountCategories" Relationship="sdmac_2010Model.FK_AccountAccountCategories_Accounts" FromRole="Account" ToRole="AccountAccountCategory" />
+    <NavigationProperty Name="AccountType" Relationship="sdmac_2010Model.FK_Accounts_AccountTypes" FromRole="Account" ToRole="AccountType" />
+    <NavigationProperty Name="PaymentStatu" Relationship="sdmac_2010Model.FK_Accounts_PaymentStatus" FromRole="Account" ToRole="PaymentStatu" />
+    <NavigationProperty Name="State" Relationship="sdmac_2010Model.FK_Accounts_States" FromRole="Account" ToRole="State" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_Accounts_Users" FromRole="Account" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Accounts_Users1" FromRole="Account" ToRole="User" />
+    <NavigationProperty Name="Addresses" Relationship="sdmac_2010Model.FK_Addresses_Accounts" FromRole="Account" ToRole="Address" />
+    <NavigationProperty Name="Alerts" Relationship="sdmac_2010Model.FK_Alerts_Accounts" FromRole="Account" ToRole="Alert" />
+    <NavigationProperty Name="DistributionLists" Relationship="sdmac_2010Model.FK_DistributionList_Accounts" FromRole="Account" ToRole="DistributionList" />
+    <NavigationProperty Name="EventReservations" Relationship="sdmac_2010Model.FK_EventReservations_Accounts" FromRole="Account" ToRole="EventReservation" />
+    <NavigationProperty Name="PaymentTransactions" Relationship="sdmac_2010Model.FK_PaymentTransactions_Accounts" FromRole="Account" ToRole="PaymentTransaction" />
+    <NavigationProperty Name="SalesOrders" Relationship="sdmac_2010Model.FK_SalesOrders_Accounts" FromRole="Account" ToRole="SalesOrder" />
+    <NavigationProperty Name="SystemTransactions" Relationship="sdmac_2010Model.FK_SystemTransactions_Accounts" FromRole="Account" ToRole="SystemTransaction" />
+    <NavigationProperty Name="Users" Relationship="sdmac_2010Model.FK_Users_Accounts" FromRole="Account" ToRole="User" />
+  </EntityType>
+  <EntityType Name="AccountType">
+    <Key>
+      <PropertyRef Name="AccountTypeID" />
+    </Key>
+    <Property Name="AccountTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MemberAmount" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="MaxEmployees" Type="Int32" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="sdmac_2010Model.FK_Accounts_AccountTypes" FromRole="AccountType" ToRole="Account" />
+    <NavigationProperty Name="AlertTemplates" Relationship="sdmac_2010Model.FK_AlertTemplates_AccountTypes" FromRole="AccountType" ToRole="AlertTemplate" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account_AccountID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Company" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Address1" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State_StateID" Type="Int32" />
+    <Property Name="PostalCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_Addresses_Accounts" FromRole="Address" ToRole="Account" />
+    <NavigationProperty Name="State" Relationship="sdmac_2010Model.FK_Addresses_States" FromRole="Address" ToRole="State" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_Addresses_Users" FromRole="Address" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Addresses_Users1" FromRole="Address" ToRole="User" />
+    <NavigationProperty Name="Events" Relationship="sdmac_2010Model.FK_Events_Addresses" FromRole="Address" ToRole="Event" />
+    <NavigationProperty Name="SalesOrders" Relationship="sdmac_2010Model.FK_SalesOrders_Addresses" FromRole="Address" ToRole="SalesOrder" />
+  </EntityType>
+  <EntityType Name="AlbumImage">
+    <Key>
+      <PropertyRef Name="AlbumImageID" />
+    </Key>
+    <Property Name="AlbumImageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Album_AlbumID" Type="Int32" Nullable="false" />
+    <Property Name="Photo_PhotoID" Type="Int32" Nullable="false" />
+    <Property Name="Rotation" Type="Int32" />
+    <Property Name="RoiTop" Type="Double" />
+    <Property Name="RoiBottom" Type="Double" />
+    <Property Name="RoiLeft" Type="Double" />
+    <Property Name="RoiRight" Type="Double" />
+    <Property Name="DisplayWidth" Type="Int32" />
+    <Property Name="DisplayHeight" Type="Int32" />
+    <Property Name="Resolution" Type="Int32" />
+    <Property Name="SortOrder" Type="Int32" />
+    <NavigationProperty Name="Album" Relationship="sdmac_2010Model.FK_AlbumImages_Albums" FromRole="AlbumImage" ToRole="Album" />
+    <NavigationProperty Name="Photo" Relationship="sdmac_2010Model.FK_AlbumImages_Photos" FromRole="AlbumImage" ToRole="Photo" />
+  </EntityType>
+  <EntityType Name="Album">
+    <Key>
+      <PropertyRef Name="AlbumID" />
+    </Key>
+    <Property Name="AlbumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Album_IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="AlbumDate" Type="DateTime" Nullable="false" />
+    <Property Name="AlbumTitle" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="AlbumDescription" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AlbumImages" Relationship="sdmac_2010Model.FK_AlbumImages_Albums" FromRole="Album" ToRole="AlbumImage" />
+    <NavigationProperty Name="SystemTransactions" Relationship="sdmac_2010Model.FK_SystemTransactions_Albums" FromRole="Album" ToRole="SystemTransaction" />
+  </EntityType>
+  <EntityType Name="Alert">
+    <Key>
+      <PropertyRef Name="AlertID" />
+    </Key>
+    <Property Name="AlertID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventReservation_EventReservationID" Type="Int32" />
+    <Property Name="Account_AccountID" Type="Int32" />
+    <Property Name="Status_AlertStatusTypeID" Type="Int32" />
+    <Property Name="AlertSubject" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="AlertBody" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SendOn" Type="DateTime" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="SalesOrder_SalesOrderID" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_Alerts_Accounts" FromRole="Alert" ToRole="Account" />
+    <NavigationProperty Name="AlertStatusType" Relationship="sdmac_2010Model.FK_Alerts_AlertStatusTypes" FromRole="Alert" ToRole="AlertStatusType" />
+    <NavigationProperty Name="EventReservation" Relationship="sdmac_2010Model.FK_Alerts_EventReservations" FromRole="Alert" ToRole="EventReservation" />
+    <NavigationProperty Name="SalesOrder" Relationship="sdmac_2010Model.FK_Alerts_SalesOrders" FromRole="Alert" ToRole="SalesOrder" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_Alerts_Users" FromRole="Alert" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Alerts_Users1" FromRole="Alert" ToRole="User" />
+    <NavigationProperty Name="SystemTransactions" Relationship="sdmac_2010Model.FK_SystemTransactions_Alerts" FromRole="Alert" ToRole="SystemTransaction" />
+  </EntityType>
+  <EntityType Name="AlertStatusType">
+    <Key>
+      <PropertyRef Name="AlertStatusTypeID" />
+    </Key>
+    <Property Name="AlertStatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Alerts" Relationship="sdmac_2010Model.FK_Alerts_AlertStatusTypes" FromRole="AlertStatusType" ToRole="Alert" />
+    <NavigationProperty Name="DistributionHistories" Relationship="sdmac_2010Model.FK_DistributionHistory_AlertStatusTypes" FromRole="AlertStatusType" ToRole="DistributionHistory" />
+  </EntityType>
+  <EntityType Name="AlertTemplate">
+    <Key>
+      <PropertyRef Name="AlertTemplateID" />
+    </Key>
+    <Property Name="AlertTemplateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="MemberOf_AlertTemplateID" Type="Int32" />
+    <Property Name="AlertSubject" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="MessageBody" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="GuestStatus_GuestStatusID" Type="Int32" />
+    <Property Name="ReservationStatus_EventReservationStatusID" Type="Int32" />
+    <Property Name="Format_MessageFormatTypeID" Type="Int32" />
+    <Property Name="Alias" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="SalesOrderStatus_SalesOrderStatusTypeID" Type="Int32" />
+    <Property Type="Int32" Name="AccountType_AccountTypeID" />
+    <NavigationProperty Name="AccountType" Relationship="sdmac_2010Model.FK_AlertTemplates_AccountTypes" FromRole="AlertTemplate" ToRole="AccountType" />
+    <NavigationProperty Name="AlertTemplates1" Relationship="sdmac_2010Model.FK_AlertTemplates_AlertTemplates" FromRole="AlertTemplate" ToRole="AlertTemplate1" />
+    <NavigationProperty Name="AlertTemplate1" Relationship="sdmac_2010Model.FK_AlertTemplates_AlertTemplates" FromRole="AlertTemplate1" ToRole="AlertTemplate" />
+    <NavigationProperty Name="EventReservationStatu" Relationship="sdmac_2010Model.FK_AlertTemplates_EventReservationStatus" FromRole="AlertTemplate" ToRole="EventReservationStatu" />
+    <NavigationProperty Name="GuestStatu" Relationship="sdmac_2010Model.FK_AlertTemplates_GuestStatus" FromRole="AlertTemplate" ToRole="GuestStatu" />
+    <NavigationProperty Name="MessageFormatType" Relationship="sdmac_2010Model.FK_AlertTemplates_MessageFormatTypes" FromRole="AlertTemplate" ToRole="MessageFormatType" />
+    <NavigationProperty Name="SalesOrderStatusType" Relationship="sdmac_2010Model.FK_AlertTemplates_SalesOrderStatusTypes" FromRole="AlertTemplate" ToRole="SalesOrderStatusType" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_AlertTemplates_Users" FromRole="AlertTemplate" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_AlertTemplates_Users1" FromRole="AlertTemplate" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DistributionDocument">
+    <Key>
+      <PropertyRef Name="DistributionDocumentID" />
+    </Key>
+    <Property Name="DistributionDocumentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Distribution_DistributionID" Type="Int32" Nullable="false" />
+    <Property Name="Document_DocumentID" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Distribution" Relationship="sdmac_2010Model.FK_DistributionDocuments_Distributions" FromRole="DistributionDocument" ToRole="Distribution" />
+    <NavigationProperty Name="Document" Relationship="sdmac_2010Model.FK_DistributionDocuments_Documents" FromRole="DistributionDocument" ToRole="Document" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_DistributionDocuments_Users" FromRole="DistributionDocument" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_DistributionDocuments_Users1" FromRole="DistributionDocument" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DistributionHistory">
+    <Key>
+      <PropertyRef Name="DistributionHistoryID" />
+    </Key>
+    <Property Name="DistributionHistoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Distribution_DistributionID" Type="Int32" Nullable="false" />
+    <Property Name="Recipient_DistributionListID" Type="Int32" Nullable="false" />
+    <Property Name="Status_AlertStatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="OccurredOn" Type="DateTime" />
+    <NavigationProperty Name="AlertStatusType" Relationship="sdmac_2010Model.FK_DistributionHistory_AlertStatusTypes" FromRole="DistributionHistory" ToRole="AlertStatusType" />
+    <NavigationProperty Name="DistributionList" Relationship="sdmac_2010Model.FK_DistributionHistory_DistributionList" FromRole="DistributionHistory" ToRole="DistributionList" />
+    <NavigationProperty Name="Distribution" Relationship="sdmac_2010Model.FK_DistributionHistory_Distributions" FromRole="DistributionHistory" ToRole="Distribution" />
+  </EntityType>
+  <EntityType Name="DistributionList">
+    <Key>
+      <PropertyRef Name="DistributionListID" />
+    </Key>
+    <Property Name="DistributionListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account_AccountID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Permissions" Type="Int64" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="LastModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_DistributionList_Accounts" FromRole="DistributionList" ToRole="Account" />
+    <NavigationProperty Name="DistributionHistories" Relationship="sdmac_2010Model.FK_DistributionHistory_DistributionList" FromRole="DistributionList" ToRole="DistributionHistory" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_DistributionList_Users" FromRole="DistributionList" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_DistributionList_Users1" FromRole="DistributionList" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Distribution">
+    <Key>
+      <PropertyRef Name="DistributionID" />
+    </Key>
+    <Property Name="DistributionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="MessageBody" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="StartOn" Type="DateTime" Nullable="false" />
+    <Property Name="FinishNoLaterThan" Type="DateTime" />
+    <Property Name="Type_DistributionTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedOn_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="Template_DistributionID" Type="Int32" />
+    <Property Name="Template" Type="Boolean" />
+    <Property Name="Event_EventID" Type="Int32" />
+    <NavigationProperty Name="DistributionDocuments" Relationship="sdmac_2010Model.FK_DistributionDocuments_Distributions" FromRole="Distribution" ToRole="DistributionDocument" />
+    <NavigationProperty Name="DistributionHistories" Relationship="sdmac_2010Model.FK_DistributionHistory_Distributions" FromRole="Distribution" ToRole="DistributionHistory" />
+    <NavigationProperty Name="Distributions1" Relationship="sdmac_2010Model.FK_Distributions_Distributions" FromRole="Distribution" ToRole="Distribution1" />
+    <NavigationProperty Name="Distribution1" Relationship="sdmac_2010Model.FK_Distributions_Distributions" FromRole="Distribution1" ToRole="Distribution" />
+    <NavigationProperty Name="DistributionType" Relationship="sdmac_2010Model.FK_Distributions_DistributionTypes" FromRole="Distribution" ToRole="DistributionType" />
+    <NavigationProperty Name="Event" Relationship="sdmac_2010Model.FK_Distributions_Events" FromRole="Distribution" ToRole="Event" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_Distributions_Users" FromRole="Distribution" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Distributions_Users1" FromRole="Distribution" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DistributionType">
+    <Key>
+      <PropertyRef Name="DistributionTypeID" />
+    </Key>
+    <Property Name="DistributionTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BitNo" Type="Int32" Nullable="false" />
+    <Property Name="Alias" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Visible" Type="Boolean" />
+    <NavigationProperty Name="Distributions" Relationship="sdmac_2010Model.FK_Distributions_DistributionTypes" FromRole="DistributionType" ToRole="Distribution" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type_DocumentTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentName" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="DocumentObj" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DocumentSize" Type="Int32" />
+    <Property Name="ContentType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreatedBy_UserID" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" />
+    <NavigationProperty Name="DistributionDocuments" Relationship="sdmac_2010Model.FK_DistributionDocuments_Documents" FromRole="Document" ToRole="DistributionDocument" />
+    <NavigationProperty Name="DocumentType" Relationship="sdmac_2010Model.FK_Documents_DocumentType" FromRole="Document" ToRole="DocumentType" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_Documents_Users" FromRole="Document" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Documents_Users1" FromRole="Document" ToRole="User" />
+    <NavigationProperty Name="EventDocuments" Relationship="sdmac_2010Model.FK_EventDocuments_Documents" FromRole="Document" ToRole="EventDocument" />
+  </EntityType>
+  <EntityType Name="DocumentType">
+    <Key>
+      <PropertyRef Name="DocumentTypeID" />
+    </Key>
+    <Property Name="DocumentTypeID" Type="Int32" Nullable="false" />
+    <Property Name="DocumentTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Documents" Relationship="sdmac_2010Model.FK_Documents_DocumentType" FromRole="DocumentType" ToRole="Document" />
+  </EntityType>
+  <EntityType Name="EventDocument">
+    <Key>
+      <PropertyRef Name="EventDocumentID" />
+    </Key>
+    <Property Name="EventDocumentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Event_EventID" Type="Int32" Nullable="false" />
+    <Property Name="Document_DocumentID" Type="Int32" Nullable="false" />
+    <Property Name="AttachToReceipt" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Document" Relationship="sdmac_2010Model.FK_EventDocuments_Documents" FromRole="EventDocument" ToRole="Document" />
+    <NavigationProperty Name="Event" Relationship="sdmac_2010Model.FK_EventDocuments_Events" FromRole="EventDocument" ToRole="Event" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_EventDocuments_Users" FromRole="EventDocument" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_EventDocuments_Users1" FromRole="EventDocument" ToRole="User" />
+  </EntityType>
+  <EntityType Name="EventEventReservationType">
+    <Key>
+      <PropertyRef Name="EventEventReservationTypeID" />
+    </Key>
+    <Property Name="EventEventReservationTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Event_EventID" Type="Int32" Nullable="false" />
+    <Property Name="ReservationType_EventReservationTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="AllowPayAtDoor" Type="Boolean" Nullable="false" />
+    <Property Name="PayAtDoorPrice" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="EventReservationType" Relationship="sdmac_2010Model.FK_EventEventReservationTypes_EventReservationTypes" FromRole="EventEventReservationType" ToRole="EventReservationType" />
+    <NavigationProperty Name="Event" Relationship="sdmac_2010Model.FK_EventEventReservationTypes_Events" FromRole="EventEventReservationType" ToRole="Event" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_EventEventReservationTypes_Users" FromRole="EventEventReservationType" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_EventEventReservationTypes_Users1" FromRole="EventEventReservationType" ToRole="User" />
+  </EntityType>
+  <EntityType Name="EventReservationGuest">
+    <Key>
+      <PropertyRef Name="GuestID" />
+    </Key>
+    <Property Name="GuestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Reservation_EventReservationID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Status_GuestStatusID" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="ExternalID" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="EventReservation" Relationship="sdmac_2010Model.FK_EventReservationGuests_EventReservations" FromRole="EventReservationGuest" ToRole="EventReservation" />
+    <NavigationProperty Name="GuestStatu" Relationship="sdmac_2010Model.FK_EventReservationGuests_GuestStatus" FromRole="EventReservationGuest" ToRole="GuestStatu" />
+  </EntityType>
+  <EntityType Name="EventReservation">
+    <Key>
+      <PropertyRef Name="EventReservationID" />
+    </Key>
+    <Property Name="EventReservationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Event_EventID" Type="Int32" Nullable="false" />
+    <Property Name="Account_AccountID" Type="Int32" />
+    <Property Name="ReservationStatus_EventReservationStatusID" Type="Int32" Nullable="false" />
+    <Property Name="ReservationDate" Type="DateTime" Nullable="false" />
+    <Property Name="ReservationPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IsFullTable" Type="Boolean" Nullable="false" />
+    <Property Name="TransactionID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="ReservationType_EventReservationTypeID" Type="Int32" />
+    <Property Name="ExternalID" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_EventReservations_Accounts" FromRole="EventReservation" ToRole="Account" />
+    <NavigationProperty Name="Alerts" Relationship="sdmac_2010Model.FK_Alerts_EventReservations" FromRole="EventReservation" ToRole="Alert" />
+    <NavigationProperty Name="EventReservationGuests" Relationship="sdmac_2010Model.FK_EventReservationGuests_EventReservations" FromRole="EventReservation" ToRole="EventReservationGuest" />
+    <NavigationProperty Name="EventReservationStatu" Relationship="sdmac_2010Model.FK_EventReservations_EventReservationStatus" FromRole="EventReservation" ToRole="EventReservationStatu" />
+    <NavigationProperty Name="EventReservationType" Relationship="sdmac_2010Model.FK_EventReservations_EventReservationTypes" FromRole="EventReservation" ToRole="EventReservationType" />
+    <NavigationProperty Name="Event" Relationship="sdmac_2010Model.FK_EventReservations_Events" FromRole="EventReservation" ToRole="Event" />
+    <NavigationProperty Name="PaymentTransactions" Relationship="sdmac_2010Model.FK_PaymentTransactions_EventReservations" FromRole="EventReservation" ToRole="PaymentTransaction" />
+  </EntityType>
+  <EntityType Name="EventReservationStatu">
+    <Key>
+      <PropertyRef Name="EventReservationStatusID" />
+    </Key>
+    <Property Name="EventReservationStatusID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AlertTemplates" Relationship="sdmac_2010Model.FK_AlertTemplates_EventReservationStatus" FromRole="EventReservationStatu" ToRole="AlertTemplate" />
+    <NavigationProperty Name="EventReservations" Relationship="sdmac_2010Model.FK_EventReservations_EventReservationStatus" FromRole="EventReservationStatu" ToRole="EventReservation" />
+  </EntityType>
+  <EntityType Name="EventReservationType">
+    <Key>
+      <PropertyRef Name="EventReservationTypeID" />
+    </Key>
+    <Property Name="EventReservationTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="DefaultPrice" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+    <Property Name="DefaultAllowPayAtDoor" Type="Boolean" Nullable="false" />
+    <Property Name="DefaultPayAtDoorPrice" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CustomName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="EventEventReservationTypes" Relationship="sdmac_2010Model.FK_EventEventReservationTypes_EventReservationTypes" FromRole="EventReservationType" ToRole="EventEventReservationType" />
+    <NavigationProperty Name="EventReservations" Relationship="sdmac_2010Model.FK_EventReservations_EventReservationTypes" FromRole="EventReservationType" ToRole="EventReservation" />
+    <NavigationProperty Name="GuestStatus" Relationship="sdmac_2010Model.FK_GuestStatus_EventReservationTypes" FromRole="EventReservationType" ToRole="GuestStatu" />
+  </EntityType>
+  <EntityType Name="Event">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="StartOn" Type="DateTime" Nullable="false" />
+    <Property Name="EndOn" Type="DateTime" Nullable="false" />
+    <Property Name="LocationAddress_AddressID" Type="Int32" />
+    <Property Name="MaxAttendees" Type="Int32" />
+    <Property Name="EventImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PDF" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ViewOnly" Type="Boolean" />
+    <Property Name="PastGuestSpeaker" Type="Boolean" />
+    <Property Name="Status_EventStatusTypeID" Type="Int32" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreatedBy_UserID" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" />
+    <Property Name="ExternalID" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="CloseDate" Type="DateTime" />
+    <NavigationProperty Name="Address" Relationship="sdmac_2010Model.FK_Events_Addresses" FromRole="Event" ToRole="Address" />
+    <NavigationProperty Name="Distributions" Relationship="sdmac_2010Model.FK_Distributions_Events" FromRole="Event" ToRole="Distribution" />
+    <NavigationProperty Name="EventDocuments" Relationship="sdmac_2010Model.FK_EventDocuments_Events" FromRole="Event" ToRole="EventDocument" />
+    <NavigationProperty Name="EventEventReservationTypes" Relationship="sdmac_2010Model.FK_EventEventReservationTypes_Events" FromRole="Event" ToRole="EventEventReservationType" />
+    <NavigationProperty Name="EventReservations" Relationship="sdmac_2010Model.FK_EventReservations_Events" FromRole="Event" ToRole="EventReservation" />
+    <NavigationProperty Name="EventStatusType" Relationship="sdmac_2010Model.FK_Events_EventStatusTypes" FromRole="Event" ToRole="EventStatusType" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_Events_Users" FromRole="Event" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Events_Users1" FromRole="Event" ToRole="User" />
+    <NavigationProperty Name="Newsletters" Relationship="sdmac_2010Model.FK_Newsletters_Events" FromRole="Event" ToRole="Newsletter" />
+  </EntityType>
+  <EntityType Name="EventStatusType">
+    <Key>
+      <PropertyRef Name="EventStatusTypeID" />
+    </Key>
+    <Property Name="EventStatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Events" Relationship="sdmac_2010Model.FK_Events_EventStatusTypes" FromRole="EventStatusType" ToRole="Event" />
+  </EntityType>
+  <EntityType Name="GuestStatu">
+    <Key>
+      <PropertyRef Name="GuestStatusID" />
+    </Key>
+    <Property Name="GuestStatusID" Type="Int32" Nullable="false" />
+    <Property Name="GuestStatusName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ShowInList" Type="Boolean" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="ReservationType_EventReservationTypeID" Type="Int32" />
+    <NavigationProperty Name="AlertTemplates" Relationship="sdmac_2010Model.FK_AlertTemplates_GuestStatus" FromRole="GuestStatu" ToRole="AlertTemplate" />
+    <NavigationProperty Name="EventReservationGuests" Relationship="sdmac_2010Model.FK_EventReservationGuests_GuestStatus" FromRole="GuestStatu" ToRole="EventReservationGuest" />
+    <NavigationProperty Name="EventReservationType" Relationship="sdmac_2010Model.FK_GuestStatus_EventReservationTypes" FromRole="GuestStatu" ToRole="EventReservationType" />
+  </EntityType>
+  <EntityType Name="HotList">
+    <Key>
+      <PropertyRef Name="HotlistID" />
+    </Key>
+    <Property Name="HotlistID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="StartOn" Type="DateTime" Nullable="false" />
+    <Property Name="EndOn" Type="DateTime" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="HotlistImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedOn_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_HotList_Users" FromRole="HotList" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_HotList_Users1" FromRole="HotList" ToRole="User" />
+  </EntityType>
+  <EntityType Name="MessageFormatType">
+    <Key>
+      <PropertyRef Name="MessageFormatTypeID" />
+    </Key>
+    <Property Name="MessageFormatTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="AlertTemplates" Relationship="sdmac_2010Model.FK_AlertTemplates_MessageFormatTypes" FromRole="MessageFormatType" ToRole="AlertTemplate" />
+  </EntityType>
+  <EntityType Name="Newsletter">
+    <Key>
+      <PropertyRef Name="NewsletterID" />
+    </Key>
+    <Property Name="NewsletterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type_NewsTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Event_EventID" Type="Int32" />
+    <Property Name="OccurredOn" Type="DateTime" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PDFDocument" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DocumentSource" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="URL" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="DocumentThumb" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ExternalID" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PDFDocumentName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="SortOrder" Type="Int32" />
+    <NavigationProperty Name="Event" Relationship="sdmac_2010Model.FK_Newsletters_Events" FromRole="Newsletter" ToRole="Event" />
+    <NavigationProperty Name="NewsType" Relationship="sdmac_2010Model.FK_Newsletters_NewsTypes" FromRole="Newsletter" ToRole="NewsType" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_Newsletters_Users" FromRole="Newsletter" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Newsletters_Users1" FromRole="Newsletter" ToRole="User" />
+  </EntityType>
+  <EntityType Name="NewsType">
+    <Key>
+      <PropertyRef Name="NewsTypeID" />
+    </Key>
+    <Property Name="NewsTypeID" Type="Int32" Nullable="false" />
+    <Property Name="NewsType_Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Newsletters" Relationship="sdmac_2010Model.FK_Newsletters_NewsTypes" FromRole="NewsType" ToRole="Newsletter" />
+  </EntityType>
+  <EntityType Name="PageTemplate">
+    <Key>
+      <PropertyRef Name="PageTemplateID" />
+    </Key>
+    <Property Name="PageTemplateID" Type="Int32" Nullable="false" />
+    <Property Name="TemplateName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Path" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="FriendlyName" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="TemplateContent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" />
+    <Property Name="ExternalNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_PageTemplate_Users" FromRole="PageTemplate" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_PageTemplate_Users1" FromRole="PageTemplate" ToRole="User" />
+    <NavigationProperty Name="VirtualPages" Relationship="sdmac_2010Model.FK_VirtualPage_PageTemplate" FromRole="PageTemplate" ToRole="VirtualPage" />
+  </EntityType>
+  <EntityType Name="PaymentStatu">
+    <Key>
+      <PropertyRef Name="PaymentStatusID" />
+    </Key>
+    <Property Name="PaymentStatusID" Type="Int32" Nullable="false" />
+    <Property Name="PaymentStatusName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Accounts" Relationship="sdmac_2010Model.FK_Accounts_PaymentStatus" FromRole="PaymentStatu" ToRole="Account" />
+  </EntityType>
+  <EntityType Name="PaymentTransaction">
+    <Key>
+      <PropertyRef Name="PaymentTransactionID" />
+    </Key>
+    <Property Name="PaymentTransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type_PaymentTransactionTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Accounts_AccountID" Type="Int32" />
+    <Property Name="Reservation_EventReservationID" Type="Int32" />
+    <Property Name="TransactionNumber" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_PaymentTransactions_Accounts" FromRole="PaymentTransaction" ToRole="Account" />
+    <NavigationProperty Name="EventReservation" Relationship="sdmac_2010Model.FK_PaymentTransactions_EventReservations" FromRole="PaymentTransaction" ToRole="EventReservation" />
+    <NavigationProperty Name="PaymentTransactionType" Relationship="sdmac_2010Model.FK_PaymentTransactions_PaymentTransactionTypes" FromRole="PaymentTransaction" ToRole="PaymentTransactionType" />
+    <NavigationProperty Name="SystemTransactions" Relationship="sdmac_2010Model.FK_SystemTransactions_PaymentTransactions" FromRole="PaymentTransaction" ToRole="SystemTransaction" />
+  </EntityType>
+  <EntityType Name="PaymentTransactionType">
+    <Key>
+      <PropertyRef Name="PaymentTransactionTypeID" />
+    </Key>
+    <Property Name="PaymentTransactionTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="PaymentTransactions" Relationship="sdmac_2010Model.FK_PaymentTransactions_PaymentTransactionTypes" FromRole="PaymentTransactionType" ToRole="PaymentTransaction" />
+  </EntityType>
+  <EntityType Name="Photo">
+    <Key>
+      <PropertyRef Name="PhotoID" />
+    </Key>
+    <Property Name="PhotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="PhotoDate" Type="DateTime" Nullable="false" />
+    <Property Name="PhotoTitle" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="PhotoDescription" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PhotoImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ImageSize" Type="Int32" />
+    <NavigationProperty Name="AlbumImages" Relationship="sdmac_2010Model.FK_AlbumImages_Photos" FromRole="Photo" ToRole="AlbumImage" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="MemberPrice" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="NonMemberPrice" Type="Decimal" Precision="13" Scale="2" />
+    <Property Name="ShippingAndHandling" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="RequireShippingAddress" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedOn_UserID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_Products_Users" FromRole="Product" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Products_Users1" FromRole="Product" ToRole="User" />
+    <NavigationProperty Name="SalesOrderDetails" Relationship="sdmac_2010Model.FK_SalesOrderDetails_Products" FromRole="Product" ToRole="SalesOrderDetail" />
+  </EntityType>
+  <EntityType Name="RewriteRule">
+    <Key>
+      <PropertyRef Name="RewriteRuleID" />
+    </Key>
+    <Property Name="RewriteRuleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="URL" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Rewrite" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreatedBy_UserID" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_RewriteRules_Users" FromRole="RewriteRule" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_RewriteRules_Users1" FromRole="RewriteRule" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SalesOrderDetail">
+    <Key>
+      <PropertyRef Name="SalesOrderDetailID" />
+    </Key>
+    <Property Name="SalesOrderDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalesOrder_SalesOrderID" Type="Int32" Nullable="false" />
+    <Property Name="OccurredOn" Type="DateTime" Nullable="false" />
+    <Property Name="Product_ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="13" Scale="2" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="sdmac_2010Model.FK_SalesOrderDetails_Products" FromRole="SalesOrderDetail" ToRole="Product" />
+    <NavigationProperty Name="SalesOrder" Relationship="sdmac_2010Model.FK_SalesOrderDetails_SalesOrders" FromRole="SalesOrderDetail" ToRole="SalesOrder" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_SalesOrderDetails_Users" FromRole="SalesOrderDetail" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_SalesOrderDetails_Users1" FromRole="SalesOrderDetail" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SalesOrder">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Account_AccountID" Type="Int32" />
+    <Property Name="ShipToAddress_AddressID" Type="Int32" />
+    <Property Name="Status_SalesOrderStatusTypeID" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="13" Scale="2" />
+    <Property Name="ShippingAndHandling" Type="Decimal" Nullable="false" Precision="13" Scale="2" />
+    <Property Name="TransactionNumber" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="OccurredOn" Type="DateTime" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_SalesOrders_Accounts" FromRole="SalesOrder" ToRole="Account" />
+    <NavigationProperty Name="Address" Relationship="sdmac_2010Model.FK_SalesOrders_Addresses" FromRole="SalesOrder" ToRole="Address" />
+    <NavigationProperty Name="Alerts" Relationship="sdmac_2010Model.FK_Alerts_SalesOrders" FromRole="SalesOrder" ToRole="Alert" />
+    <NavigationProperty Name="SalesOrderDetails" Relationship="sdmac_2010Model.FK_SalesOrderDetails_SalesOrders" FromRole="SalesOrder" ToRole="SalesOrderDetail" />
+    <NavigationProperty Name="SalesOrderStatusType" Relationship="sdmac_2010Model.FK_SalesOrders_SalesOrderStatusTypes" FromRole="SalesOrder" ToRole="SalesOrderStatusType" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_SalesOrders_Users" FromRole="SalesOrder" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_SalesOrders_Users1" FromRole="SalesOrder" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SalesOrderStatusType">
+    <Key>
+      <PropertyRef Name="SalesOrderStatusTypeID" />
+    </Key>
+    <Property Name="SalesOrderStatusTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="AlertTemplates" Relationship="sdmac_2010Model.FK_AlertTemplates_SalesOrderStatusTypes" FromRole="SalesOrderStatusType" ToRole="AlertTemplate" />
+    <NavigationProperty Name="SalesOrders" Relationship="sdmac_2010Model.FK_SalesOrders_SalesOrderStatusTypes" FromRole="SalesOrderStatusType" ToRole="SalesOrder" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Abbreviation" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Accounts" Relationship="sdmac_2010Model.FK_Accounts_States" FromRole="State" ToRole="Account" />
+    <NavigationProperty Name="Addresses" Relationship="sdmac_2010Model.FK_Addresses_States" FromRole="State" ToRole="Address" />
+  </EntityType>
+  <EntityType Name="SystemConstant">
+    <Key>
+      <PropertyRef Name="SystemConstantID" />
+    </Key>
+    <Property Name="SystemConstantID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ConstantValue" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_SystemConstants_Users" FromRole="SystemConstant" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_SystemConstants_Users1" FromRole="SystemConstant" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SystemTransaction">
+    <Key>
+      <PropertyRef Name="SystemTransactionID" />
+    </Key>
+    <Property Name="SystemTransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type_SystemTransactionTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Account_AccountID" Type="Int32" />
+    <Property Name="Album_AlbumID" Type="Int32" />
+    <Property Name="Alert_AlertID" Type="Int32" />
+    <Property Name="Payment_PaymentTransactionID" Type="Int32" />
+    <Property Name="SystemMessage" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_SystemTransactions_Accounts" FromRole="SystemTransaction" ToRole="Account" />
+    <NavigationProperty Name="Album" Relationship="sdmac_2010Model.FK_SystemTransactions_Albums" FromRole="SystemTransaction" ToRole="Album" />
+    <NavigationProperty Name="Alert" Relationship="sdmac_2010Model.FK_SystemTransactions_Alerts" FromRole="SystemTransaction" ToRole="Alert" />
+    <NavigationProperty Name="PaymentTransaction" Relationship="sdmac_2010Model.FK_SystemTransactions_PaymentTransactions" FromRole="SystemTransaction" ToRole="PaymentTransaction" />
+    <NavigationProperty Name="SystemTransactionType" Relationship="sdmac_2010Model.FK_SystemTransactions_SystemTransactionTypes" FromRole="SystemTransaction" ToRole="SystemTransactionType" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_SystemTransactions_Users" FromRole="SystemTransaction" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_SystemTransactions_Users1" FromRole="SystemTransaction" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SystemTransactionType">
+    <Key>
+      <PropertyRef Name="SystemTransactionTypeID" />
+    </Key>
+    <Property Name="SystemTransactionTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="SystemTransactions" Relationship="sdmac_2010Model.FK_SystemTransactions_SystemTransactionTypes" FromRole="SystemTransactionType" ToRole="SystemTransaction" />
+  </EntityType>
+  <EntityType Name="UserRight">
+    <Key>
+      <PropertyRef Name="UserRightID" />
+    </Key>
+    <Property Name="UserRightID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="BitNo" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedOn_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_UserRights_Users" FromRole="UserRight" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_UserRights_Users1" FromRole="UserRight" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="PermissionBit" Type="Int64" />
+    <NavigationProperty Name="UserUserRoles" Relationship="sdmac_2010Model.FK_UserUserRoles_UserRoles" FromRole="UserRole" ToRole="UserUserRole" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserLoginName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="UserFirstName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="UserLastName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="LastLogin" Type="DateTime" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Account_AccountID" Type="Int32" />
+    <NavigationProperty Name="AccountAccountCategories" Relationship="sdmac_2010Model.FK_AccountAccountCategories_Users" FromRole="User" ToRole="AccountAccountCategory" />
+    <NavigationProperty Name="AccountAccountCategories1" Relationship="sdmac_2010Model.FK_AccountAccountCategories_Users1" FromRole="User" ToRole="AccountAccountCategory" />
+    <NavigationProperty Name="Accounts" Relationship="sdmac_2010Model.FK_Accounts_Users" FromRole="User" ToRole="Account" />
+    <NavigationProperty Name="Accounts1" Relationship="sdmac_2010Model.FK_Accounts_Users1" FromRole="User" ToRole="Account" />
+    <NavigationProperty Name="Account" Relationship="sdmac_2010Model.FK_Users_Accounts" FromRole="User" ToRole="Account" />
+    <NavigationProperty Name="Addresses" Relationship="sdmac_2010Model.FK_Addresses_Users" FromRole="User" ToRole="Address" />
+    <NavigationProperty Name="Addresses1" Relationship="sdmac_2010Model.FK_Addresses_Users1" FromRole="User" ToRole="Address" />
+    <NavigationProperty Name="Alerts" Relationship="sdmac_2010Model.FK_Alerts_Users" FromRole="User" ToRole="Alert" />
+    <NavigationProperty Name="Alerts1" Relationship="sdmac_2010Model.FK_Alerts_Users1" FromRole="User" ToRole="Alert" />
+    <NavigationProperty Name="AlertTemplates" Relationship="sdmac_2010Model.FK_AlertTemplates_Users" FromRole="User" ToRole="AlertTemplate" />
+    <NavigationProperty Name="AlertTemplates1" Relationship="sdmac_2010Model.FK_AlertTemplates_Users1" FromRole="User" ToRole="AlertTemplate" />
+    <NavigationProperty Name="DistributionDocuments" Relationship="sdmac_2010Model.FK_DistributionDocuments_Users" FromRole="User" ToRole="DistributionDocument" />
+    <NavigationProperty Name="DistributionDocuments1" Relationship="sdmac_2010Model.FK_DistributionDocuments_Users1" FromRole="User" ToRole="DistributionDocument" />
+    <NavigationProperty Name="DistributionLists" Relationship="sdmac_2010Model.FK_DistributionList_Users" FromRole="User" ToRole="DistributionList" />
+    <NavigationProperty Name="DistributionLists1" Relationship="sdmac_2010Model.FK_DistributionList_Users1" FromRole="User" ToRole="DistributionList" />
+    <NavigationProperty Name="Distributions" Relationship="sdmac_2010Model.FK_Distributions_Users" FromRole="User" ToRole="Distribution" />
+    <NavigationProperty Name="Distributions1" Relationship="sdmac_2010Model.FK_Distributions_Users1" FromRole="User" ToRole="Distribution" />
+    <NavigationProperty Name="Documents" Relationship="sdmac_2010Model.FK_Documents_Users" FromRole="User" ToRole="Document" />
+    <NavigationProperty Name="Documents1" Relationship="sdmac_2010Model.FK_Documents_Users1" FromRole="User" ToRole="Document" />
+    <NavigationProperty Name="EventDocuments" Relationship="sdmac_2010Model.FK_EventDocuments_Users" FromRole="User" ToRole="EventDocument" />
+    <NavigationProperty Name="EventDocuments1" Relationship="sdmac_2010Model.FK_EventDocuments_Users1" FromRole="User" ToRole="EventDocument" />
+    <NavigationProperty Name="EventEventReservationTypes" Relationship="sdmac_2010Model.FK_EventEventReservationTypes_Users" FromRole="User" ToRole="EventEventReservationType" />
+    <NavigationProperty Name="EventEventReservationTypes1" Relationship="sdmac_2010Model.FK_EventEventReservationTypes_Users1" FromRole="User" ToRole="EventEventReservationType" />
+    <NavigationProperty Name="Events" Relationship="sdmac_2010Model.FK_Events_Users" FromRole="User" ToRole="Event" />
+    <NavigationProperty Name="Events1" Relationship="sdmac_2010Model.FK_Events_Users1" FromRole="User" ToRole="Event" />
+    <NavigationProperty Name="HotLists" Relationship="sdmac_2010Model.FK_HotList_Users" FromRole="User" ToRole="HotList" />
+    <NavigationProperty Name="HotLists1" Relationship="sdmac_2010Model.FK_HotList_Users1" FromRole="User" ToRole="HotList" />
+    <NavigationProperty Name="Newsletters" Relationship="sdmac_2010Model.FK_Newsletters_Users" FromRole="User" ToRole="Newsletter" />
+    <NavigationProperty Name="Newsletters1" Relationship="sdmac_2010Model.FK_Newsletters_Users1" FromRole="User" ToRole="Newsletter" />
+    <NavigationProperty Name="PageTemplates" Relationship="sdmac_2010Model.FK_PageTemplate_Users" FromRole="User" ToRole="PageTemplate" />
+    <NavigationProperty Name="PageTemplates1" Relationship="sdmac_2010Model.FK_PageTemplate_Users1" FromRole="User" ToRole="PageTemplate" />
+    <NavigationProperty Name="Products" Relationship="sdmac_2010Model.FK_Products_Users" FromRole="User" ToRole="Product" />
+    <NavigationProperty Name="Products1" Relationship="sdmac_2010Model.FK_Products_Users1" FromRole="User" ToRole="Product" />
+    <NavigationProperty Name="RewriteRules" Relationship="sdmac_2010Model.FK_RewriteRules_Users" FromRole="User" ToRole="RewriteRule" />
+    <NavigationProperty Name="RewriteRules1" Relationship="sdmac_2010Model.FK_RewriteRules_Users1" FromRole="User" ToRole="RewriteRule" />
+    <NavigationProperty Name="SalesOrderDetails" Relationship="sdmac_2010Model.FK_SalesOrderDetails_Users" FromRole="User" ToRole="SalesOrderDetail" />
+    <NavigationProperty Name="SalesOrderDetails1" Relationship="sdmac_2010Model.FK_SalesOrderDetails_Users1" FromRole="User" ToRole="SalesOrderDetail" />
+    <NavigationProperty Name="SalesOrders" Relationship="sdmac_2010Model.FK_SalesOrders_Users" FromRole="User" ToRole="SalesOrder" />
+    <NavigationProperty Name="SalesOrders1" Relationship="sdmac_2010Model.FK_SalesOrders_Users1" FromRole="User" ToRole="SalesOrder" />
+    <NavigationProperty Name="SystemConstants" Relationship="sdmac_2010Model.FK_SystemConstants_Users" FromRole="User" ToRole="SystemConstant" />
+    <NavigationProperty Name="SystemConstants1" Relationship="sdmac_2010Model.FK_SystemConstants_Users1" FromRole="User" ToRole="SystemConstant" />
+    <NavigationProperty Name="SystemTransactions" Relationship="sdmac_2010Model.FK_SystemTransactions_Users" FromRole="User" ToRole="SystemTransaction" />
+    <NavigationProperty Name="SystemTransactions1" Relationship="sdmac_2010Model.FK_SystemTransactions_Users1" FromRole="User" ToRole="SystemTransaction" />
+    <NavigationProperty Name="UserRights" Relationship="sdmac_2010Model.FK_UserRights_Users" FromRole="User" ToRole="UserRight" />
+    <NavigationProperty Name="UserRights1" Relationship="sdmac_2010Model.FK_UserRights_Users1" FromRole="User" ToRole="UserRight" />
+    <NavigationProperty Name="Users1" Relationship="sdmac_2010Model.FK_Users_Users" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_Users_Users" FromRole="User1" ToRole="User" />
+    <NavigationProperty Name="Users11" Relationship="sdmac_2010Model.FK_Users_Users1" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User2" Relationship="sdmac_2010Model.FK_Users_Users1" FromRole="User1" ToRole="User" />
+    <NavigationProperty Name="UserUserRoles" Relationship="sdmac_2010Model.FK_UserUserRoles_Users" FromRole="User" ToRole="UserUserRole" />
+    <NavigationProperty Name="UserUserRoles1" Relationship="sdmac_2010Model.FK_UserUserRoles_Users1" FromRole="User" ToRole="UserUserRole" />
+    <NavigationProperty Name="UserUserRoles2" Relationship="sdmac_2010Model.FK_UserUserRoles_Users2" FromRole="User" ToRole="UserUserRole" />
+    <NavigationProperty Name="VirtualPages" Relationship="sdmac_2010Model.FK_VirtualPage_Users" FromRole="User" ToRole="VirtualPage" />
+    <NavigationProperty Name="VirtualPages1" Relationship="sdmac_2010Model.FK_VirtualPage_Users1" FromRole="User" ToRole="VirtualPage" />
+  </EntityType>
+  <EntityType Name="UserUserRole">
+    <Key>
+      <PropertyRef Name="UserUserRoleID" />
+    </Key>
+    <Property Name="UserUserRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserRole_UserRoleID" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+    <Property Name="ModifiedOn_UserID" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="UserRole" Relationship="sdmac_2010Model.FK_UserUserRoles_UserRoles" FromRole="UserUserRole" ToRole="UserRole" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_UserUserRoles_Users" FromRole="UserUserRole" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_UserUserRoles_Users1" FromRole="UserUserRole" ToRole="User" />
+    <NavigationProperty Name="User2" Relationship="sdmac_2010Model.FK_UserUserRoles_Users2" FromRole="UserUserRole" ToRole="User" />
+  </EntityType>
+  <EntityType Name="VirtualPage">
+    <Key>
+      <PropertyRef Name="VirtualPageID" />
+    </Key>
+    <Property Name="VirtualPageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Template_PageTemplateID" Type="Int32" />
+    <Property Name="MemberOf_VirtualPageID" Type="Int32" />
+    <Property Name="IsTemplate" Type="Boolean" />
+    <Property Name="PageName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PageContent" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="CreatedBy_UserID" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="ModifiedBy_UserID" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" />
+    <NavigationProperty Name="PageTemplate" Relationship="sdmac_2010Model.FK_VirtualPage_PageTemplate" FromRole="VirtualPage" ToRole="PageTemplate" />
+    <NavigationProperty Name="User" Relationship="sdmac_2010Model.FK_VirtualPage_Users" FromRole="VirtualPage" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="sdmac_2010Model.FK_VirtualPage_Users1" FromRole="VirtualPage" ToRole="User" />
+    <NavigationProperty Name="VirtualPage1" Relationship="sdmac_2010Model.FK_VirtualPage_VirtualPage" FromRole="VirtualPage" ToRole="VirtualPage1" />
+    <NavigationProperty Name="VirtualPage2" Relationship="sdmac_2010Model.FK_VirtualPage_VirtualPage" FromRole="VirtualPage1" ToRole="VirtualPage" />
+  </EntityType>
+  <Association Name="FK_AccountAccountCategories_AccountCategories">
+    <End Type="sdmac_2010Model.AccountCategory" Role="AccountCategory" Multiplicity="1" />
+    <End Type="sdmac_2010Model.AccountAccountCategory" Role="AccountAccountCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountCategory">
+        <PropertyRef Name="AccountCategoryID" />
+      </Principal>
+      <Dependent Role="AccountAccountCategory">
+        <PropertyRef Name="Category_AccountCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccountAccountCategories_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="1" />
+    <End Type="sdmac_2010Model.AccountAccountCategory" Role="AccountAccountCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="AccountAccountCategory">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccountAccountCategories_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.AccountAccountCategory" Role="AccountAccountCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="AccountAccountCategory">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccountAccountCategories_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.AccountAccountCategory" Role="AccountAccountCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="AccountAccountCategory">
+        <PropertyRef Name="ModifiedOn_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AccountCategories_AccountCategories">
+    <End Type="sdmac_2010Model.AccountCategory" Role="AccountCategory" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.AccountCategory" Role="AccountCategory1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountCategory">
+        <PropertyRef Name="AccountCategoryID" />
+      </Principal>
+      <Dependent Role="AccountCategory1">
+        <PropertyRef Name="MemberOf_AccountCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_AccountTypes">
+    <End Type="sdmac_2010Model.AccountType" Role="AccountType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountType">
+        <PropertyRef Name="AccountTypeID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="Type_AccountTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_PaymentStatus">
+    <End Type="sdmac_2010Model.PaymentStatu" Role="PaymentStatu" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentStatu">
+        <PropertyRef Name="PaymentStatusID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="PaymentStatus_PaymentStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_States">
+    <End Type="sdmac_2010Model.State" Role="State" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="State_StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Addresses_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alerts_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Alert" Role="Alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="Alert">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionList_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.DistributionList" Role="DistributionList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="DistributionList">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventReservations_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.EventReservation" Role="EventReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="EventReservation">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentTransactions_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.PaymentTransaction" Role="PaymentTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="PaymentTransaction">
+        <PropertyRef Name="Accounts_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrders_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.SalesOrder" Role="SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemTransactions_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.SystemTransaction" Role="SystemTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="SystemTransaction">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Accounts">
+    <End Type="sdmac_2010Model.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTemplates_AccountTypes">
+    <End Type="sdmac_2010Model.AccountType" Role="AccountType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountType">
+        <PropertyRef Name="AccountTypeID" />
+      </Principal>
+      <Dependent Role="AlertTemplate">
+        <PropertyRef Name="AccountType_AccountTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Addresses_States">
+    <End Type="sdmac_2010Model.State" Role="State" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="State_StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Addresses_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Addresses_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Events_Addresses">
+    <End Type="sdmac_2010Model.Address" Role="Address" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="LocationAddress_AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrders_Addresses">
+    <End Type="sdmac_2010Model.Address" Role="Address" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.SalesOrder" Role="SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="ShipToAddress_AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlbumImages_Albums">
+    <End Type="sdmac_2010Model.Album" Role="Album" Multiplicity="1" />
+    <End Type="sdmac_2010Model.AlbumImage" Role="AlbumImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Album">
+        <PropertyRef Name="AlbumID" />
+      </Principal>
+      <Dependent Role="AlbumImage">
+        <PropertyRef Name="Album_AlbumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlbumImages_Photos">
+    <End Type="sdmac_2010Model.Photo" Role="Photo" Multiplicity="1" />
+    <End Type="sdmac_2010Model.AlbumImage" Role="AlbumImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Photo">
+        <PropertyRef Name="PhotoID" />
+      </Principal>
+      <Dependent Role="AlbumImage">
+        <PropertyRef Name="Photo_PhotoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemTransactions_Albums">
+    <End Type="sdmac_2010Model.Album" Role="Album" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.SystemTransaction" Role="SystemTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Album">
+        <PropertyRef Name="AlbumID" />
+      </Principal>
+      <Dependent Role="SystemTransaction">
+        <PropertyRef Name="Album_AlbumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alerts_AlertStatusTypes">
+    <End Type="sdmac_2010Model.AlertStatusType" Role="AlertStatusType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Alert" Role="Alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlertStatusType">
+        <PropertyRef Name="AlertStatusTypeID" />
+      </Principal>
+      <Dependent Role="Alert">
+        <PropertyRef Name="Status_AlertStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alerts_EventReservations">
+    <End Type="sdmac_2010Model.EventReservation" Role="EventReservation" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Alert" Role="Alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventReservation">
+        <PropertyRef Name="EventReservationID" />
+      </Principal>
+      <Dependent Role="Alert">
+        <PropertyRef Name="EventReservation_EventReservationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alerts_SalesOrders">
+    <End Type="sdmac_2010Model.SalesOrder" Role="SalesOrder" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Alert" Role="Alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrder">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="Alert">
+        <PropertyRef Name="SalesOrder_SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alerts_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Alert" Role="Alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Alert">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alerts_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Alert" Role="Alert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Alert">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemTransactions_Alerts">
+    <End Type="sdmac_2010Model.Alert" Role="Alert" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.SystemTransaction" Role="SystemTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alert">
+        <PropertyRef Name="AlertID" />
+      </Principal>
+      <Dependent Role="SystemTransaction">
+        <PropertyRef Name="Alert_AlertID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionHistory_AlertStatusTypes">
+    <End Type="sdmac_2010Model.AlertStatusType" Role="AlertStatusType" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionHistory" Role="DistributionHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlertStatusType">
+        <PropertyRef Name="AlertStatusTypeID" />
+      </Principal>
+      <Dependent Role="DistributionHistory">
+        <PropertyRef Name="Status_AlertStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTemplates_AlertTemplates">
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlertTemplate">
+        <PropertyRef Name="AlertTemplateID" />
+      </Principal>
+      <Dependent Role="AlertTemplate1">
+        <PropertyRef Name="MemberOf_AlertTemplateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTemplates_EventReservationStatus">
+    <End Type="sdmac_2010Model.EventReservationStatu" Role="EventReservationStatu" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventReservationStatu">
+        <PropertyRef Name="EventReservationStatusID" />
+      </Principal>
+      <Dependent Role="AlertTemplate">
+        <PropertyRef Name="ReservationStatus_EventReservationStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTemplates_GuestStatus">
+    <End Type="sdmac_2010Model.GuestStatu" Role="GuestStatu" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GuestStatu">
+        <PropertyRef Name="GuestStatusID" />
+      </Principal>
+      <Dependent Role="AlertTemplate">
+        <PropertyRef Name="GuestStatus_GuestStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTemplates_MessageFormatTypes">
+    <End Type="sdmac_2010Model.MessageFormatType" Role="MessageFormatType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessageFormatType">
+        <PropertyRef Name="MessageFormatTypeID" />
+      </Principal>
+      <Dependent Role="AlertTemplate">
+        <PropertyRef Name="Format_MessageFormatTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTemplates_SalesOrderStatusTypes">
+    <End Type="sdmac_2010Model.SalesOrderStatusType" Role="SalesOrderStatusType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrderStatusType">
+        <PropertyRef Name="SalesOrderStatusTypeID" />
+      </Principal>
+      <Dependent Role="AlertTemplate">
+        <PropertyRef Name="SalesOrderStatus_SalesOrderStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTemplates_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="AlertTemplate">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AlertTemplates_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.AlertTemplate" Role="AlertTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="AlertTemplate">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionDocuments_Distributions">
+    <End Type="sdmac_2010Model.Distribution" Role="Distribution" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionDocument" Role="DistributionDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distribution">
+        <PropertyRef Name="DistributionID" />
+      </Principal>
+      <Dependent Role="DistributionDocument">
+        <PropertyRef Name="Distribution_DistributionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionDocuments_Documents">
+    <End Type="sdmac_2010Model.Document" Role="Document" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionDocument" Role="DistributionDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="DocumentID" />
+      </Principal>
+      <Dependent Role="DistributionDocument">
+        <PropertyRef Name="Document_DocumentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionDocuments_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionDocument" Role="DistributionDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DistributionDocument">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionDocuments_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionDocument" Role="DistributionDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DistributionDocument">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionHistory_DistributionList">
+    <End Type="sdmac_2010Model.DistributionList" Role="DistributionList" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionHistory" Role="DistributionHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DistributionList">
+        <PropertyRef Name="DistributionListID" />
+      </Principal>
+      <Dependent Role="DistributionHistory">
+        <PropertyRef Name="Recipient_DistributionListID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionHistory_Distributions">
+    <End Type="sdmac_2010Model.Distribution" Role="Distribution" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionHistory" Role="DistributionHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distribution">
+        <PropertyRef Name="DistributionID" />
+      </Principal>
+      <Dependent Role="DistributionHistory">
+        <PropertyRef Name="Distribution_DistributionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionList_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionList" Role="DistributionList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DistributionList">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistributionList_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.DistributionList" Role="DistributionList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="DistributionList">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Distributions_Distributions">
+    <End Type="sdmac_2010Model.Distribution" Role="Distribution" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Distribution" Role="Distribution1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Distribution">
+        <PropertyRef Name="DistributionID" />
+      </Principal>
+      <Dependent Role="Distribution1">
+        <PropertyRef Name="Template_DistributionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Distributions_DistributionTypes">
+    <End Type="sdmac_2010Model.DistributionType" Role="DistributionType" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Distribution" Role="Distribution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DistributionType">
+        <PropertyRef Name="DistributionTypeID" />
+      </Principal>
+      <Dependent Role="Distribution">
+        <PropertyRef Name="Type_DistributionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Distributions_Events">
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Distribution" Role="Distribution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="Distribution">
+        <PropertyRef Name="Event_EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Distributions_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Distribution" Role="Distribution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Distribution">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Distributions_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Distribution" Role="Distribution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Distribution">
+        <PropertyRef Name="ModifiedOn_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_DocumentType">
+    <End Type="sdmac_2010Model.DocumentType" Role="DocumentType" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentType">
+        <PropertyRef Name="DocumentTypeID" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="Type_DocumentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventDocuments_Documents">
+    <End Type="sdmac_2010Model.Document" Role="Document" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventDocument" Role="EventDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="DocumentID" />
+      </Principal>
+      <Dependent Role="EventDocument">
+        <PropertyRef Name="Document_DocumentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventDocuments_Events">
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventDocument" Role="EventDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="EventDocument">
+        <PropertyRef Name="Event_EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventDocuments_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventDocument" Role="EventDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="EventDocument">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventDocuments_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventDocument" Role="EventDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="EventDocument">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventEventReservationTypes_EventReservationTypes">
+    <End Type="sdmac_2010Model.EventReservationType" Role="EventReservationType" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventEventReservationType" Role="EventEventReservationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventReservationType">
+        <PropertyRef Name="EventReservationTypeID" />
+      </Principal>
+      <Dependent Role="EventEventReservationType">
+        <PropertyRef Name="ReservationType_EventReservationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventEventReservationTypes_Events">
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventEventReservationType" Role="EventEventReservationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="EventEventReservationType">
+        <PropertyRef Name="Event_EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventEventReservationTypes_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventEventReservationType" Role="EventEventReservationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="EventEventReservationType">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventEventReservationTypes_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventEventReservationType" Role="EventEventReservationType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="EventEventReservationType">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventReservationGuests_EventReservations">
+    <End Type="sdmac_2010Model.EventReservation" Role="EventReservation" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventReservationGuest" Role="EventReservationGuest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventReservation">
+        <PropertyRef Name="EventReservationID" />
+      </Principal>
+      <Dependent Role="EventReservationGuest">
+        <PropertyRef Name="Reservation_EventReservationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventReservationGuests_GuestStatus">
+    <End Type="sdmac_2010Model.GuestStatu" Role="GuestStatu" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventReservationGuest" Role="EventReservationGuest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GuestStatu">
+        <PropertyRef Name="GuestStatusID" />
+      </Principal>
+      <Dependent Role="EventReservationGuest">
+        <PropertyRef Name="Status_GuestStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventReservations_EventReservationStatus">
+    <End Type="sdmac_2010Model.EventReservationStatu" Role="EventReservationStatu" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventReservation" Role="EventReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventReservationStatu">
+        <PropertyRef Name="EventReservationStatusID" />
+      </Principal>
+      <Dependent Role="EventReservation">
+        <PropertyRef Name="ReservationStatus_EventReservationStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventReservations_EventReservationTypes">
+    <End Type="sdmac_2010Model.EventReservationType" Role="EventReservationType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.EventReservation" Role="EventReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventReservationType">
+        <PropertyRef Name="EventReservationTypeID" />
+      </Principal>
+      <Dependent Role="EventReservation">
+        <PropertyRef Name="ReservationType_EventReservationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventReservations_Events">
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="1" />
+    <End Type="sdmac_2010Model.EventReservation" Role="EventReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="EventReservation">
+        <PropertyRef Name="Event_EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentTransactions_EventReservations">
+    <End Type="sdmac_2010Model.EventReservation" Role="EventReservation" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.PaymentTransaction" Role="PaymentTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventReservation">
+        <PropertyRef Name="EventReservationID" />
+      </Principal>
+      <Dependent Role="PaymentTransaction">
+        <PropertyRef Name="Reservation_EventReservationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GuestStatus_EventReservationTypes">
+    <End Type="sdmac_2010Model.EventReservationType" Role="EventReservationType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.GuestStatu" Role="GuestStatu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventReservationType">
+        <PropertyRef Name="EventReservationTypeID" />
+      </Principal>
+      <Dependent Role="GuestStatu">
+        <PropertyRef Name="ReservationType_EventReservationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Events_EventStatusTypes">
+    <End Type="sdmac_2010Model.EventStatusType" Role="EventStatusType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventStatusType">
+        <PropertyRef Name="EventStatusTypeID" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="Status_EventStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Events_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Events_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Event">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Newsletters_Events">
+    <End Type="sdmac_2010Model.Event" Role="Event" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.Newsletter" Role="Newsletter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Event">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="Newsletter">
+        <PropertyRef Name="Event_EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HotList_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.HotList" Role="HotList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="HotList">
+        <PropertyRef Name="CreatedOn_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HotList_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.HotList" Role="HotList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="HotList">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Newsletters_NewsTypes">
+    <End Type="sdmac_2010Model.NewsType" Role="NewsType" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Newsletter" Role="Newsletter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NewsType">
+        <PropertyRef Name="NewsTypeID" />
+      </Principal>
+      <Dependent Role="Newsletter">
+        <PropertyRef Name="Type_NewsTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Newsletters_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Newsletter" Role="Newsletter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Newsletter">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Newsletters_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Newsletter" Role="Newsletter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Newsletter">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PageTemplate_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.PageTemplate" Role="PageTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PageTemplate">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PageTemplate_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.PageTemplate" Role="PageTemplate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="PageTemplate">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPage_PageTemplate">
+    <End Type="sdmac_2010Model.PageTemplate" Role="PageTemplate" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.VirtualPage" Role="VirtualPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PageTemplate">
+        <PropertyRef Name="PageTemplateID" />
+      </Principal>
+      <Dependent Role="VirtualPage">
+        <PropertyRef Name="Template_PageTemplateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentTransactions_PaymentTransactionTypes">
+    <End Type="sdmac_2010Model.PaymentTransactionType" Role="PaymentTransactionType" Multiplicity="1" />
+    <End Type="sdmac_2010Model.PaymentTransaction" Role="PaymentTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentTransactionType">
+        <PropertyRef Name="PaymentTransactionTypeID" />
+      </Principal>
+      <Dependent Role="PaymentTransaction">
+        <PropertyRef Name="Type_PaymentTransactionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemTransactions_PaymentTransactions">
+    <End Type="sdmac_2010Model.PaymentTransaction" Role="PaymentTransaction" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.SystemTransaction" Role="SystemTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentTransaction">
+        <PropertyRef Name="PaymentTransactionID" />
+      </Principal>
+      <Dependent Role="SystemTransaction">
+        <PropertyRef Name="Payment_PaymentTransactionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ModifiedOn_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderDetails_Products">
+    <End Type="sdmac_2010Model.Product" Role="Product" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SalesOrderDetail" Role="SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="Product_ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RewriteRules_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.RewriteRule" Role="RewriteRule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="RewriteRule">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RewriteRules_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.RewriteRule" Role="RewriteRule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="RewriteRule">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderDetails_SalesOrders">
+    <End Type="sdmac_2010Model.SalesOrder" Role="SalesOrder" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SalesOrderDetail" Role="SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrder">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="SalesOrder_SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderDetails_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SalesOrderDetail" Role="SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrderDetails_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SalesOrderDetail" Role="SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrders_SalesOrderStatusTypes">
+    <End Type="sdmac_2010Model.SalesOrderStatusType" Role="SalesOrderStatusType" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.SalesOrder" Role="SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrderStatusType">
+        <PropertyRef Name="SalesOrderStatusTypeID" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="Status_SalesOrderStatusTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrders_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SalesOrder" Role="SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesOrders_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SalesOrder" Role="SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemConstants_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SystemConstant" Role="SystemConstant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SystemConstant">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemConstants_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SystemConstant" Role="SystemConstant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SystemConstant">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemTransactions_SystemTransactionTypes">
+    <End Type="sdmac_2010Model.SystemTransactionType" Role="SystemTransactionType" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SystemTransaction" Role="SystemTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemTransactionType">
+        <PropertyRef Name="SystemTransactionTypeID" />
+      </Principal>
+      <Dependent Role="SystemTransaction">
+        <PropertyRef Name="Type_SystemTransactionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemTransactions_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SystemTransaction" Role="SystemTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SystemTransaction">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemTransactions_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.SystemTransaction" Role="SystemTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SystemTransaction">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRights_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.UserRight" Role="UserRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserRight">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRights_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.UserRight" Role="UserRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserRight">
+        <PropertyRef Name="ModifiedOn_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserUserRoles_UserRoles">
+    <End Type="sdmac_2010Model.UserRole" Role="UserRole" Multiplicity="1" />
+    <End Type="sdmac_2010Model.UserUserRole" Role="UserUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRole">
+        <PropertyRef Name="UserRoleID" />
+      </Principal>
+      <Dependent Role="UserUserRole">
+        <PropertyRef Name="UserRole_UserRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.User" Role="User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.User" Role="User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserUserRoles_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.UserUserRole" Role="UserUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserUserRole">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserUserRoles_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.UserUserRole" Role="UserUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserUserRole">
+        <PropertyRef Name="ModifiedOn_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserUserRoles_Users2">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="1" />
+    <End Type="sdmac_2010Model.UserUserRole" Role="UserUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserUserRole">
+        <PropertyRef Name="User_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPage_Users">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.VirtualPage" Role="VirtualPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VirtualPage">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPage_Users1">
+    <End Type="sdmac_2010Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.VirtualPage" Role="VirtualPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VirtualPage">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPage_VirtualPage">
+    <End Type="sdmac_2010Model.VirtualPage" Role="VirtualPage" Multiplicity="0..1" />
+    <End Type="sdmac_2010Model.VirtualPage" Role="VirtualPage1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VirtualPage">
+        <PropertyRef Name="VirtualPageID" />
+      </Principal>
+      <Dependent Role="VirtualPage1">
+        <PropertyRef Name="MemberOf_VirtualPageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

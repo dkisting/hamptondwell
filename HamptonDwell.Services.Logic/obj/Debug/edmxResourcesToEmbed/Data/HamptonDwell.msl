@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hamptondwellModelStoreContainer" CdmEntityContainer="hamptondwellEntities">
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="hamptondwellModel.Document">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="Type_DocumentTypeID" ColumnName="Type_DocumentTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DocumentObj" ColumnName="DocumentObj" />
+          <ScalarProperty Name="DocumentSize" ColumnName="DocumentSize" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentTypes">
+      <EntityTypeMapping TypeName="hamptondwellModel.DocumentType">
+        <MappingFragment StoreEntitySet="DocumentType">
+          <ScalarProperty Name="DocumentTypeID" ColumnName="DocumentTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RewriteRules">
+      <EntityTypeMapping TypeName="hamptondwellModel.RewriteRule">
+        <MappingFragment StoreEntitySet="RewriteRules">
+          <ScalarProperty Name="VirtualPage_VirtualPageID" ColumnName="VirtualPage_VirtualPageID" />
+          <ScalarProperty Name="RewriteRuleID" ColumnName="RewriteRuleID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Rewrite" ColumnName="Rewrite" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemConstants">
+      <EntityTypeMapping TypeName="hamptondwellModel.SystemConstant">
+        <MappingFragment StoreEntitySet="SystemConstants">
+          <ScalarProperty Name="SystemConstantID" ColumnName="SystemConstantID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ConstantValue" ColumnName="ConstantValue" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="hamptondwellModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VirtualPages">
+      <EntityTypeMapping TypeName="hamptondwellModel.VirtualPage">
+        <MappingFragment StoreEntitySet="VirtualPage">
+          <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="VirtualPageID" ColumnName="VirtualPageID" />
+          <ScalarProperty Name="Template_VirtualPageID" ColumnName="Template_VirtualPageID" />
+          <ScalarProperty Name="MemberOf_VirtualPageID" ColumnName="MemberOf_VirtualPageID" />
+          <ScalarProperty Name="IsTemplate" ColumnName="IsTemplate" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PageContent" ColumnName="PageContent" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VirtualPageKeywords">
+      <EntityTypeMapping TypeName="hamptondwellModel.VirtualPageKeyword">
+        <MappingFragment StoreEntitySet="VirtualPageKeywords">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="PageKeyword" ColumnName="PageKeyword" />
+          <ScalarProperty Name="VirtualPage_VirtualPageID" ColumnName="VirtualPage_VirtualPageID" />
+          <ScalarProperty Name="VirtualPageKeywordID" ColumnName="VirtualPageKeywordID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageQueueTypes">
+      <EntityTypeMapping TypeName="hamptondwellModel.MessageQueueType">
+        <MappingFragment StoreEntitySet="MessageQueueType">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MessageQueueTypeID" ColumnName="MessageQueueTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageQueueStatus">
+      <EntityTypeMapping TypeName="hamptondwellModel.MessageQueueStatu">
+        <MappingFragment StoreEntitySet="MessageQueueStatus">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MessageQueueStatusID" ColumnName="MessageQueueStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageQueues">
+      <EntityTypeMapping TypeName="hamptondwellModel.MessageQueue">
+        <MappingFragment StoreEntitySet="MessageQueue">
+          <ScalarProperty Name="OccurredOn" ColumnName="OccurredOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="MessageResponse" ColumnName="MessageResponse" />
+          <ScalarProperty Name="MessageBody" ColumnName="MessageBody" />
+          <ScalarProperty Name="Status_MessageQueueStatusID" ColumnName="Status_MessageQueueStatusID" />
+          <ScalarProperty Name="Type_MessageQueueTypeID" ColumnName="Type_MessageQueueTypeID" />
+          <ScalarProperty Name="MessageQueueID" ColumnName="MessageQueueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="MasterPages_Admin" %>
+
+<!doctype html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <title>Hampton Dwell Admin Panel</title>
+    <link rel="stylesheet" href="<%=Page.ResolveClientUrl("~/css/layout.css") %>" type="text/css"
+        media="screen" />
+    <link rel="stylesheet" href="<%=Page.ResolveClientUrl("~/css/tabs-no-images.css") %>"
+        rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <script type="text/javascript" src="<%=Page.ResolveClientUrl("~/client_scripts/jquery-1.5.2.min.js") %>"></script>
+    <script type="text/javascript" src="<%=Page.ResolveClientUrl("~/client_scripts/jquery.equalHeight.js") %>"></script>
+    <script type="text/javascript" src="<%=Page.ResolveClientUrl("~/client_scripts/jquery.tablesorter.min.js") %>"></script>
+    <script type="text/javascript" src="<%=Page.ResolveClientUrl("~/client_scripts/jquery/hideshow.js") %>"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".tablesorter").tablesorter();
+        }
+	);
+        $(document).ready(function () {
+
+            //When page loads...
+            $(".tab_content").hide(); //Hide all content
+            $("ul.tabs li:first").addClass("active").show(); //Activate first tab
+            $(".tab_content:first").show(); //Show first tab content
+
+            //On Click Event
+            $("ul.tabs li").click(function () {
+
+                $("ul.tabs li").removeClass("active"); //Remove any "active" class
+                $(this).addClass("active"); //Add "active" class to selected tab
+                $(".tab_content").hide(); //Hide all tab content
+
+                var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+                $(activeTab).fadeIn(); //Fade in the active ID content
+                return false;
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('.column').equalHeight();
+        });
+</script>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <header id="header">
+		<hgroup>
+			<h1 class="site_title"><a href="Default.aspx">Hampton Dwell</a></h1>
+			<h2 class="section_title">Admin Panel</h2><div class="btn_view_site"><a href="http://stage.hamptondwell.com">View Site</a></div>
+		</hgroup>
+	</header>
+    <!-- end of header bar -->
+    <section id="secondary_bar">
+		<div class="user">
+			<p><asp:Literal ID="litLoginName" runat="server" />&nbsp;<a id="lnkLoginName" class="thickbox"
+                                    runat="server" /> &nbsp;<a id="lnkHelp" runat="server" Visible="false" class="thickbox"></a></p>
+			<!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
+		</div>
+		<div class="breadcrumbs_container">
+			<article class="breadcrumbs"><a href="<%=Page.ResolveClientUrl("~/admin/Default.aspx") %>">Website Admin</a> <div class="breadcrumb_divider"></div> <a class="current">Dashboard</a></article>
+		</div>
+	</section>
+    <!-- end of secondary bar -->
+    <aside id="sidebar" class="column" style="height: 800px;">
+
+		<h3>Content</h3>
+
+		              <asp:TreeView ID="TreeViewMainMenu" runat="server" DataSourceID="SiteMapDataSource1"
+                                    imageet="XPFileExplorer" NodeIndent="15">
+                                    <ParentNodeStyle Font-Bold="False" />
+                                    <HoverNodeStyle Font-Underline="True" ForeColor="#1b17b0" />
+                                    <SelectedNodeStyle Font-Bold="true" Font-Underline="False" HorizontalPadding="0px"
+                                        VerticalPadding="0px" />
+                                    <NodeStyle Font-Names="Tahoma" Font-Size="8pt" ForeColor="Black" HorizontalPadding="2px"
+                                        NodeSpacing="0px" VerticalPadding="2px" />
+                                </asp:TreeView>
+                                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+		<footer>
+			<hr />
+			<p><strong>Copyright &copy; <%=DateTime.Now.Year %> Hampton Dwell</strong></p>
+			<p>Web Development by <a href="http://www.e-bsolutions.com">e-Business Solutions</a></p>
+            <p>Version: <asp:Literal ID="litVersion" runat="server" />&nbsp;</p>
+		</footer>
+	</aside>
+    <!-- end of sidebar -->
+    <section id="main" class="column">
+<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      </asp:ContentPlaceHolder>
+    </section>
+    </form>
+</body>
+</html>

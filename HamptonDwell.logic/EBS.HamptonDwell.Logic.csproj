@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69373A96-1595-4578-8083-96B80727827F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EBS.HamptonDwell.Web.Logic</RootNamespace>
+    <AssemblyName>EBS.HamptonDwell.Web.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebFormsMvp">
+      <HintPath>..\SDMAC.Web\bin\WebFormsMvp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Breadcrumb.cs" />
+    <Compile Include="Domain\Rewrites.cs" />
+    <Compile Include="Domain\SystemTimer.cs" />
+    <Compile Include="Extensions\Mail.cs" />
+    <Compile Include="Extensions\SystemConstantHelper.cs" />
+    <Compile Include="Extensions\Encryption.cs" />
+    <Compile Include="Extensions\JSONHelper.cs" />
+    <Compile Include="Extensions\WebHelper.cs" />
+    <Compile Include="Presenters\Admin\LogoutPresenter.cs" />
+    <Compile Include="Presenters\Admin\LoginPresenter.cs" />
+    <Compile Include="Presenters\Admin\MessageQueueEventArgs.cs" />
+    <Compile Include="Presenters\Admin\UserListPresenter.cs" />
+    <Compile Include="Presenters\Admin\VirtualPageListPresenter.cs" />
+    <Compile Include="Presenters\Admin\SystemConstantListPresenter.cs" />
+    <Compile Include="Presenters\Admin\VirtualPageEditPresenter.cs" />
+    <Compile Include="Presenters\Admin\VitualPageEventArgs.cs" />
+    <Compile Include="Presenters\Admin\SystemConstantEventArgs.cs" />
+    <Compile Include="Presenters\Admin\SystemConstantEditPresenter.cs" />
+    <Compile Include="Presenters\Admin\UserEditPresenter.cs" />
+    <Compile Include="Presenters\Admin\UserEventArgs.cs" />
+    <Compile Include="Presenters\FrontEnd\HomePageControllerPresenter.cs" />
+    <Compile Include="Presenters\FrontEnd\ForgotPasswordPresenter.cs" />
+    <Compile Include="Presenters\FrontEnd\FrontEndHomeControllerEventArgs.cs" />
+    <Compile Include="Presenters\HamptonDwellPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MessageQueueService.cs" />
+    <Compile Include="Services\RewriteRule.cs" />
+    <Compile Include="Services\SystemConstantService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\VirtualPageService.cs" />
+    <Compile Include="Views\BreadCrumbView.cs" />
+    <Compile Include="Views\HomePageView.cs" />
+    <Compile Include="Views\Interfaces\Admin\ILogoutView.cs" />
+    <Compile Include="Views\Interfaces\Admin\ILoginView.cs" />
+    <Compile Include="Views\Interfaces\Admin\IForgotPasswordView.cs" />
+    <Compile Include="Views\Interfaces\Admin\IUserList.cs" />
+    <Compile Include="Views\Interfaces\Admin\IVirtualPageList.cs" />
+    <Compile Include="Views\Interfaces\Admin\ISystemConstantList.cs" />
+    <Compile Include="Views\Interfaces\Admin\IVirtualPageEdit.cs" />
+    <Compile Include="Views\Interfaces\Admin\ISystemConstantEdit.cs" />
+    <Compile Include="Views\Interfaces\Admin\IUserEditView.cs" />
+    <Compile Include="Views\Interfaces\FrontEnd\INode.cs" />
+    <Compile Include="Views\Interfaces\FrontEnd\IIFrontEndHomeController.cs" />
+    <Compile Include="Views\Models\Admin\LogoutModel.cs" />
+    <Compile Include="Views\Models\Admin\LoginModel.cs" />
+    <Compile Include="Views\Models\Admin\UserListModel.cs" />
+    <Compile Include="Views\Models\Admin\VirtualPageListModel.cs" />
+    <Compile Include="Views\Models\Admin\SystemConstantListModel.cs" />
+    <Compile Include="Views\Models\Admin\VirtualPageEditModel.cs" />
+    <Compile Include="Views\Models\Admin\SystemConstantEditModel.cs" />
+    <Compile Include="Views\Models\Admin\UserEditModel.cs" />
+    <Compile Include="Views\Models\BreadCrumbModel.cs" />
+    <Compile Include="Views\Models\ForgotPasswordModel.cs" />
+    <Compile Include="Views\Models\FrontEnd\FrontEndHomeControllerModel.cs" />
+    <Compile Include="Views\Models\HomePageModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

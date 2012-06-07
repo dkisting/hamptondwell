@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Home"  description="Home" url="default.aspx">
+    <siteMapNode title="System Constants"  description="Admin" roles="ADMIN">
+
+
+      <siteMapNode url="SystemConstants.aspx" title="Edit System Constants" />
+      <siteMapNode url="SystemConstantEdit.aspx" title="Add System Constant" />
+    </siteMapNode>
+
+    <siteMapNode title="Content"  description="Admin" roles="ADMIN">
+      <siteMapNode url="VirtualPageList.aspx" title="Edit Virtual Pages" />
+      <siteMapNode url="VirtualPageEdit.aspx" title="Add Virtual Page" />
+    </siteMapNode>
+    <siteMapNode title="Security"  description="Admin" roles="ADMIN">
+
+      <siteMapNode url="UserList.aspx" title="Edit Users" />
+      <siteMapNode url="UserEdit.aspx" title="Add User" />
+
+    </siteMapNode>"
+    <siteMapNode title="Logout"  description="Logout" url="Logout.aspx" />
+    <siteMapNode title="Public Web Site"  description="Logout" url="http://stage.hamptondwell.com" />
+  </siteMapNode>
+
+</siteMap>

@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hamptondwellModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="hamptondwellModelStoreContainer">
+    <EntitySet Name="Documents" EntityType="hamptondwellModel.Store.Documents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentType" EntityType="hamptondwellModel.Store.DocumentType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MessageQueue" EntityType="hamptondwellModel.Store.MessageQueue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MessageQueueStatus" EntityType="hamptondwellModel.Store.MessageQueueStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MessageQueueType" EntityType="hamptondwellModel.Store.MessageQueueType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RewriteRules" EntityType="hamptondwellModel.Store.RewriteRules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SystemConstants" EntityType="hamptondwellModel.Store.SystemConstants" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="hamptondwellModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VirtualPage" EntityType="hamptondwellModel.Store.VirtualPage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VirtualPageKeywords" EntityType="hamptondwellModel.Store.VirtualPageKeywords" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Documents_DocumentType" Association="hamptondwellModel.Store.FK_Documents_DocumentType">
+      <End Role="DocumentType" EntitySet="DocumentType" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Users" Association="hamptondwellModel.Store.FK_Documents_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Users1" Association="hamptondwellModel.Store.FK_Documents_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageQueue_MessageQueueStatus" Association="hamptondwellModel.Store.FK_MessageQueue_MessageQueueStatus">
+      <End Role="MessageQueueStatus" EntitySet="MessageQueueStatus" />
+      <End Role="MessageQueue" EntitySet="MessageQueue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageQueue_MessageQueueType" Association="hamptondwellModel.Store.FK_MessageQueue_MessageQueueType">
+      <End Role="MessageQueueType" EntitySet="MessageQueueType" />
+      <End Role="MessageQueue" EntitySet="MessageQueue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageQueue_Users" Association="hamptondwellModel.Store.FK_MessageQueue_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="MessageQueue" EntitySet="MessageQueue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageQueue_Users1" Association="hamptondwellModel.Store.FK_MessageQueue_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="MessageQueue" EntitySet="MessageQueue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RewriteRules_Users" Association="hamptondwellModel.Store.FK_RewriteRules_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="RewriteRules" EntitySet="RewriteRules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RewriteRules_Users1" Association="hamptondwellModel.Store.FK_RewriteRules_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="RewriteRules" EntitySet="RewriteRules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RewriteRules_VirtualPage" Association="hamptondwellModel.Store.FK_RewriteRules_VirtualPage">
+      <End Role="VirtualPage" EntitySet="VirtualPage" />
+      <End Role="RewriteRules" EntitySet="RewriteRules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemConstants_Users" Association="hamptondwellModel.Store.FK_SystemConstants_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="SystemConstants" EntitySet="SystemConstants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemConstants_Users1" Association="hamptondwellModel.Store.FK_SystemConstants_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="SystemConstants" EntitySet="SystemConstants" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users" Association="hamptondwellModel.Store.FK_Users_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users1" Association="hamptondwellModel.Store.FK_Users_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPage_Users" Association="hamptondwellModel.Store.FK_VirtualPage_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="VirtualPage" EntitySet="VirtualPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPage_Users1" Association="hamptondwellModel.Store.FK_VirtualPage_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="VirtualPage" EntitySet="VirtualPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPage_VirtualPage" Association="hamptondwellModel.Store.FK_VirtualPage_VirtualPage">
+      <End Role="VirtualPage" EntitySet="VirtualPage" />
+      <End Role="VirtualPage1" EntitySet="VirtualPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPage_VirtualPage1" Association="hamptondwellModel.Store.FK_VirtualPage_VirtualPage1">
+      <End Role="VirtualPage" EntitySet="VirtualPage" />
+      <End Role="VirtualPage1" EntitySet="VirtualPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPageKeywords_Users" Association="hamptondwellModel.Store.FK_VirtualPageKeywords_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="VirtualPageKeywords" EntitySet="VirtualPageKeywords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPageKeywords_Users1" Association="hamptondwellModel.Store.FK_VirtualPageKeywords_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="VirtualPageKeywords" EntitySet="VirtualPageKeywords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VirtualPageKeywords_VirtualPage" Association="hamptondwellModel.Store.FK_VirtualPageKeywords_VirtualPage">
+      <End Role="VirtualPage" EntitySet="VirtualPage" />
+      <End Role="VirtualPageKeywords" EntitySet="VirtualPageKeywords" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Type_DocumentTypeID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="DocumentObj" Type="image" />
+    <Property Name="DocumentSize" Type="int" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreatedBy_UserID" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy_UserID" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DocumentType">
+    <Key>
+      <PropertyRef Name="DocumentTypeID" />
+    </Key>
+    <Property Name="DocumentTypeID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Alias" Type="varchar" MaxLength="20" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="MessageQueue">
+    <Key>
+      <PropertyRef Name="MessageQueueID" />
+    </Key>
+    <Property Name="MessageQueueID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Type_MessageQueueTypeID" Type="int" Nullable="false" />
+    <Property Name="Status_MessageQueueStatusID" Type="int" Nullable="false" />
+    <Property Name="MessageBody" Type="varchar(max)" Nullable="false" />
+    <Property Name="MessageResponse" Type="varchar(max)" />
+    <Property Name="OccurredOn" Type="datetime" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="int" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MessageQueueStatus">
+    <Key>
+      <PropertyRef Name="MessageQueueStatusID" />
+    </Key>
+    <Property Name="MessageQueueStatusID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MessageQueueType">
+    <Key>
+      <PropertyRef Name="MessageQueueTypeID" />
+    </Key>
+    <Property Name="MessageQueueTypeID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RewriteRules">
+    <Key>
+      <PropertyRef Name="RewriteRuleID" />
+    </Key>
+    <Property Name="RewriteRuleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VirtualPage_VirtualPageID" Type="int" Nullable="false" />
+    <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Rewrite" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreatedBy_UserID" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy_UserID" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SystemConstants">
+    <Key>
+      <PropertyRef Name="SystemConstantID" />
+    </Key>
+    <Property Name="SystemConstantID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ConstantValue" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="int" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="200" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy_UserID" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VirtualPage">
+    <Key>
+      <PropertyRef Name="VirtualPageID" />
+    </Key>
+    <Property Name="VirtualPageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Template_VirtualPageID" Type="int" />
+    <Property Name="MemberOf_VirtualPageID" Type="int" />
+    <Property Name="IsTemplate" Type="bit" />
+    <Property Name="PageName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MetaDescription" Type="varchar" Nullable="false" MaxLength="5000" />
+    <Property Name="PageTitle" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="Path" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PageContent" Type="text" Nullable="false" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreatedBy_UserID" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy_UserID" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VirtualPageKeywords">
+    <Key>
+      <PropertyRef Name="VirtualPageKeywordID" />
+    </Key>
+    <Property Name="VirtualPageKeywordID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VirtualPage_VirtualPageID" Type="int" Nullable="false" />
+    <Property Name="PageKeyword" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy_UserID" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy_UserID" Type="int" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Documents_DocumentType">
+    <End Role="DocumentType" Type="hamptondwellModel.Store.DocumentType" Multiplicity="1" />
+    <End Role="Documents" Type="hamptondwellModel.Store.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentType">
+        <PropertyRef Name="DocumentTypeID" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="Type_DocumentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Users">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Documents" Type="hamptondwellModel.Store.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Users1">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Documents" Type="hamptondwellModel.Store.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageQueue_MessageQueueStatus">
+    <End Role="MessageQueueStatus" Type="hamptondwellModel.Store.MessageQueueStatus" Multiplicity="1" />
+    <End Role="MessageQueue" Type="hamptondwellModel.Store.MessageQueue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessageQueueStatus">
+        <PropertyRef Name="MessageQueueStatusID" />
+      </Principal>
+      <Dependent Role="MessageQueue">
+        <PropertyRef Name="Status_MessageQueueStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageQueue_MessageQueueType">
+    <End Role="MessageQueueType" Type="hamptondwellModel.Store.MessageQueueType" Multiplicity="1" />
+    <End Role="MessageQueue" Type="hamptondwellModel.Store.MessageQueue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MessageQueueType">
+        <PropertyRef Name="MessageQueueTypeID" />
+      </Principal>
+      <Dependent Role="MessageQueue">
+        <PropertyRef Name="Type_MessageQueueTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageQueue_Users">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="1" />
+    <End Role="MessageQueue" Type="hamptondwellModel.Store.MessageQueue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="MessageQueue">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageQueue_Users1">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="1" />
+    <End Role="MessageQueue" Type="hamptondwellModel.Store.MessageQueue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="MessageQueue">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RewriteRules_Users">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="0..1" />
+    <End Role="RewriteRules" Type="hamptondwellModel.Store.RewriteRules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="RewriteRules">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RewriteRules_Users1">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="0..1" />
+    <End Role="RewriteRules" Type="hamptondwellModel.Store.RewriteRules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="RewriteRules">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RewriteRules_VirtualPage">
+    <End Role="VirtualPage" Type="hamptondwellModel.Store.VirtualPage" Multiplicity="1" />
+    <End Role="RewriteRules" Type="hamptondwellModel.Store.RewriteRules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VirtualPage">
+        <PropertyRef Name="VirtualPageID" />
+      </Principal>
+      <Dependent Role="RewriteRules">
+        <PropertyRef Name="VirtualPage_VirtualPageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemConstants_Users">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="1" />
+    <End Role="SystemConstants" Type="hamptondwellModel.Store.SystemConstants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SystemConstants">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemConstants_Users1">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="1" />
+    <End Role="SystemConstants" Type="hamptondwellModel.Store.SystemConstants" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SystemConstants">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Users1" Type="hamptondwellModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users1">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Users1" Type="hamptondwellModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPage_Users">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="0..1" />
+    <End Role="VirtualPage" Type="hamptondwellModel.Store.VirtualPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VirtualPage">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPage_Users1">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="0..1" />
+    <End Role="VirtualPage" Type="hamptondwellModel.Store.VirtualPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VirtualPage">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPage_VirtualPage">
+    <End Role="VirtualPage" Type="hamptondwellModel.Store.VirtualPage" Multiplicity="0..1" />
+    <End Role="VirtualPage1" Type="hamptondwellModel.Store.VirtualPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VirtualPage">
+        <PropertyRef Name="VirtualPageID" />
+      </Principal>
+      <Dependent Role="VirtualPage1">
+        <PropertyRef Name="MemberOf_VirtualPageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPage_VirtualPage1">
+    <End Role="VirtualPage" Type="hamptondwellModel.Store.VirtualPage" Multiplicity="0..1" />
+    <End Role="VirtualPage1" Type="hamptondwellModel.Store.VirtualPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VirtualPage">
+        <PropertyRef Name="VirtualPageID" />
+      </Principal>
+      <Dependent Role="VirtualPage1">
+        <PropertyRef Name="Template_VirtualPageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPageKeywords_Users">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="1" />
+    <End Role="VirtualPageKeywords" Type="hamptondwellModel.Store.VirtualPageKeywords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VirtualPageKeywords">
+        <PropertyRef Name="CreatedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPageKeywords_Users1">
+    <End Role="Users" Type="hamptondwellModel.Store.Users" Multiplicity="1" />
+    <End Role="VirtualPageKeywords" Type="hamptondwellModel.Store.VirtualPageKeywords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="VirtualPageKeywords">
+        <PropertyRef Name="ModifiedBy_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VirtualPageKeywords_VirtualPage">
+    <End Role="VirtualPage" Type="hamptondwellModel.Store.VirtualPage" Multiplicity="1" />
+    <End Role="VirtualPageKeywords" Type="hamptondwellModel.Store.VirtualPageKeywords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VirtualPage">
+        <PropertyRef Name="VirtualPageID" />
+      </Principal>
+      <Dependent Role="VirtualPageKeywords">
+        <PropertyRef Name="VirtualPage_VirtualPageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

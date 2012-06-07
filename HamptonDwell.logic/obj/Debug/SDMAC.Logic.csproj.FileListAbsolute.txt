@@ -1,0 +1,9 @@
+E:\Develop\SDMAC - 2010\SDMAC.Logic\bin\Debug\WebFormsMvp.dll
+E:\Develop\SDMAC - 2010\SDMAC.Logic\bin\Debug\WebFormsMvp.pdb
+E:\Develop\SDMAC - 2010\SDMAC.Logic\bin\Debug\WebFormsMvp.xml
+E:\Develop\SDMAC - 2010\SDMAC.Logic\obj\Debug\ResolveAssemblyReference.cache
+E:\Develop\SDMAC - 2010\SDMAC.Logic\bin\Debug\SDMAC.Web.Logic.dll.config
+E:\Develop\SDMAC - 2010\SDMAC.Logic\bin\Debug\SDMAC.Web.Logic.dll
+E:\Develop\SDMAC - 2010\SDMAC.Logic\bin\Debug\SDMAC.Web.Logic.pdb
+E:\Develop\SDMAC - 2010\SDMAC.Logic\obj\Debug\SDMAC.Web.Logic.dll
+E:\Develop\SDMAC - 2010\SDMAC.Logic\obj\Debug\SDMAC.Web.Logic.pdb

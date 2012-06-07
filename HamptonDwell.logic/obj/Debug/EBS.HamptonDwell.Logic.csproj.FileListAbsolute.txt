@@ -1,0 +1,6 @@
+E:\Develop\hamptondwell.com\HamptonDwell.logic\bin\Debug\EBS.HamptonDwell.Web.Logic.dll.config
+E:\Develop\hamptondwell.com\HamptonDwell.logic\bin\Debug\EBS.HamptonDwell.Web.Logic.dll
+E:\Develop\hamptondwell.com\HamptonDwell.logic\bin\Debug\EBS.HamptonDwell.Web.Logic.pdb
+E:\Develop\hamptondwell.com\HamptonDwell.logic\obj\Debug\ResolveAssemblyReference.cache
+E:\Develop\hamptondwell.com\HamptonDwell.logic\obj\Debug\EBS.HamptonDwell.Web.Logic.dll
+E:\Develop\hamptondwell.com\HamptonDwell.logic\obj\Debug\EBS.HamptonDwell.Web.Logic.pdb

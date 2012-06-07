@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Service="EBS.HamptonDwell.Services.MessageQueues.MessageQueueWebService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"  %>

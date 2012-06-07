@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sdmac_2010ModelStoreContainer" CdmEntityContainer="sdmac_2010Entities">
+    <EntitySetMapping Name="AccountAccountCategories">
+      <EntityTypeMapping TypeName="sdmac_2010Model.AccountAccountCategory">
+        <MappingFragment StoreEntitySet="AccountAccountCategories">
+          <ScalarProperty Name="AccountAccountCategoryID" ColumnName="AccountAccountCategoryID" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+          <ScalarProperty Name="Category_AccountCategoryID" ColumnName="Category_AccountCategoryID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn_UserID" ColumnName="ModifiedOn_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountCategories">
+      <EntityTypeMapping TypeName="sdmac_2010Model.AccountCategory">
+        <MappingFragment StoreEntitySet="AccountCategories">
+          <ScalarProperty Name="AccountCategoryID" ColumnName="AccountCategoryID" />
+          <ScalarProperty Name="MemberOf_AccountCategoryID" ColumnName="MemberOf_AccountCategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="Type_AccountTypeID" ColumnName="Type_AccountTypeID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State_StateID" ColumnName="State_StateID" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="RenewalDate" ColumnName="RenewalDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="WebURL" ColumnName="WebURL" />
+          <ScalarProperty Name="CompanyLogo" ColumnName="CompanyLogo" />
+          <ScalarProperty Name="PaymentStatus_PaymentStatusID" ColumnName="PaymentStatus_PaymentStatusID" />
+          <ScalarProperty Name="ShowOnWebSite" ColumnName="ShowOnWebSite" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ExternalID" ColumnName="ExternalID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.AccountType">
+        <MappingFragment StoreEntitySet="AccountTypes">
+          <ScalarProperty Name="AccountTypeID" ColumnName="AccountTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MemberAmount" ColumnName="MemberAmount" />
+          <ScalarProperty Name="MaxEmployees" ColumnName="MaxEmployees" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Address">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State_StateID" ColumnName="State_StateID" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlbumImages">
+      <EntityTypeMapping TypeName="sdmac_2010Model.AlbumImage">
+        <MappingFragment StoreEntitySet="AlbumImages">
+          <ScalarProperty Name="AlbumImageID" ColumnName="AlbumImageID" />
+          <ScalarProperty Name="Album_AlbumID" ColumnName="Album_AlbumID" />
+          <ScalarProperty Name="Photo_PhotoID" ColumnName="Photo_PhotoID" />
+          <ScalarProperty Name="Rotation" ColumnName="Rotation" />
+          <ScalarProperty Name="RoiTop" ColumnName="RoiTop" />
+          <ScalarProperty Name="RoiBottom" ColumnName="RoiBottom" />
+          <ScalarProperty Name="RoiLeft" ColumnName="RoiLeft" />
+          <ScalarProperty Name="RoiRight" ColumnName="RoiRight" />
+          <ScalarProperty Name="DisplayWidth" ColumnName="DisplayWidth" />
+          <ScalarProperty Name="DisplayHeight" ColumnName="DisplayHeight" />
+          <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Album">
+        <MappingFragment StoreEntitySet="Albums">
+          <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
+          <ScalarProperty Name="Album_IsActive" ColumnName="Album_IsActive" />
+          <ScalarProperty Name="AlbumDate" ColumnName="AlbumDate" />
+          <ScalarProperty Name="AlbumTitle" ColumnName="AlbumTitle" />
+          <ScalarProperty Name="AlbumDescription" ColumnName="AlbumDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Alerts">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Alert">
+        <MappingFragment StoreEntitySet="Alerts">
+          <ScalarProperty Name="AlertID" ColumnName="AlertID" />
+          <ScalarProperty Name="EventReservation_EventReservationID" ColumnName="EventReservation_EventReservationID" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+          <ScalarProperty Name="Status_AlertStatusTypeID" ColumnName="Status_AlertStatusTypeID" />
+          <ScalarProperty Name="AlertSubject" ColumnName="AlertSubject" />
+          <ScalarProperty Name="AlertBody" ColumnName="AlertBody" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="SendOn" ColumnName="SendOn" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="SalesOrder_SalesOrderID" ColumnName="SalesOrder_SalesOrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertStatusTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.AlertStatusType">
+        <MappingFragment StoreEntitySet="AlertStatusTypes">
+          <ScalarProperty Name="AlertStatusTypeID" ColumnName="AlertStatusTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlertTemplates">
+      <EntityTypeMapping TypeName="sdmac_2010Model.AlertTemplate">
+        <MappingFragment StoreEntitySet="AlertTemplates">
+          <ScalarProperty Name="AccountType_AccountTypeID" ColumnName="AccountType_AccountTypeID" />
+          <ScalarProperty Name="AlertTemplateID" ColumnName="AlertTemplateID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MemberOf_AlertTemplateID" ColumnName="MemberOf_AlertTemplateID" />
+          <ScalarProperty Name="AlertSubject" ColumnName="AlertSubject" />
+          <ScalarProperty Name="MessageBody" ColumnName="MessageBody" />
+          <ScalarProperty Name="GuestStatus_GuestStatusID" ColumnName="GuestStatus_GuestStatusID" />
+          <ScalarProperty Name="ReservationStatus_EventReservationStatusID" ColumnName="ReservationStatus_EventReservationStatusID" />
+          <ScalarProperty Name="Format_MessageFormatTypeID" ColumnName="Format_MessageFormatTypeID" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="SalesOrderStatus_SalesOrderStatusTypeID" ColumnName="SalesOrderStatus_SalesOrderStatusTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistributionDocuments">
+      <EntityTypeMapping TypeName="sdmac_2010Model.DistributionDocument">
+        <MappingFragment StoreEntitySet="DistributionDocuments">
+          <ScalarProperty Name="DistributionDocumentID" ColumnName="DistributionDocumentID" />
+          <ScalarProperty Name="Distribution_DistributionID" ColumnName="Distribution_DistributionID" />
+          <ScalarProperty Name="Document_DocumentID" ColumnName="Document_DocumentID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistributionHistories">
+      <EntityTypeMapping TypeName="sdmac_2010Model.DistributionHistory">
+        <MappingFragment StoreEntitySet="DistributionHistory">
+          <ScalarProperty Name="DistributionHistoryID" ColumnName="DistributionHistoryID" />
+          <ScalarProperty Name="Distribution_DistributionID" ColumnName="Distribution_DistributionID" />
+          <ScalarProperty Name="Recipient_DistributionListID" ColumnName="Recipient_DistributionListID" />
+          <ScalarProperty Name="Status_AlertStatusTypeID" ColumnName="Status_AlertStatusTypeID" />
+          <ScalarProperty Name="OccurredOn" ColumnName="OccurredOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistributionLists">
+      <EntityTypeMapping TypeName="sdmac_2010Model.DistributionList">
+        <MappingFragment StoreEntitySet="DistributionList">
+          <ScalarProperty Name="DistributionListID" ColumnName="DistributionListID" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Permissions" ColumnName="Permissions" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="LastModifiedOn" ColumnName="LastModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Distributions">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Distribution">
+        <MappingFragment StoreEntitySet="Distributions">
+          <ScalarProperty Name="DistributionID" ColumnName="DistributionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MessageBody" ColumnName="MessageBody" />
+          <ScalarProperty Name="StartOn" ColumnName="StartOn" />
+          <ScalarProperty Name="FinishNoLaterThan" ColumnName="FinishNoLaterThan" />
+          <ScalarProperty Name="Type_DistributionTypeID" ColumnName="Type_DistributionTypeID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn_UserID" ColumnName="ModifiedOn_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Template_DistributionID" ColumnName="Template_DistributionID" />
+          <ScalarProperty Name="Template" ColumnName="Template" />
+          <ScalarProperty Name="Event_EventID" ColumnName="Event_EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistributionTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.DistributionType">
+        <MappingFragment StoreEntitySet="DistributionTypes">
+          <ScalarProperty Name="DistributionTypeID" ColumnName="DistributionTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BitNo" ColumnName="BitNo" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Document">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="Type_DocumentTypeID" ColumnName="Type_DocumentTypeID" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="DocumentObj" ColumnName="DocumentObj" />
+          <ScalarProperty Name="DocumentSize" ColumnName="DocumentSize" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.DocumentType">
+        <MappingFragment StoreEntitySet="DocumentType">
+          <ScalarProperty Name="DocumentTypeID" ColumnName="DocumentTypeID" />
+          <ScalarProperty Name="DocumentTypeName" ColumnName="DocumentTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventDocuments">
+      <EntityTypeMapping TypeName="sdmac_2010Model.EventDocument">
+        <MappingFragment StoreEntitySet="EventDocuments">
+          <ScalarProperty Name="EventDocumentID" ColumnName="EventDocumentID" />
+          <ScalarProperty Name="Event_EventID" ColumnName="Event_EventID" />
+          <ScalarProperty Name="Document_DocumentID" ColumnName="Document_DocumentID" />
+          <ScalarProperty Name="AttachToReceipt" ColumnName="AttachToReceipt" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventEventReservationTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.EventEventReservationType">
+        <MappingFragment StoreEntitySet="EventEventReservationTypes">
+          <ScalarProperty Name="EventEventReservationTypeID" ColumnName="EventEventReservationTypeID" />
+          <ScalarProperty Name="Event_EventID" ColumnName="Event_EventID" />
+          <ScalarProperty Name="ReservationType_EventReservationTypeID" ColumnName="ReservationType_EventReservationTypeID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="AllowPayAtDoor" ColumnName="AllowPayAtDoor" />
+          <ScalarProperty Name="PayAtDoorPrice" ColumnName="PayAtDoorPrice" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventReservationGuests">
+      <EntityTypeMapping TypeName="sdmac_2010Model.EventReservationGuest">
+        <MappingFragment StoreEntitySet="EventReservationGuests">
+          <ScalarProperty Name="GuestID" ColumnName="GuestID" />
+          <ScalarProperty Name="Reservation_EventReservationID" ColumnName="Reservation_EventReservationID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Status_GuestStatusID" ColumnName="Status_GuestStatusID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ExternalID" ColumnName="ExternalID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventReservations">
+      <EntityTypeMapping TypeName="sdmac_2010Model.EventReservation">
+        <MappingFragment StoreEntitySet="EventReservations">
+          <ScalarProperty Name="EventReservationID" ColumnName="EventReservationID" />
+          <ScalarProperty Name="Event_EventID" ColumnName="Event_EventID" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+          <ScalarProperty Name="ReservationStatus_EventReservationStatusID" ColumnName="ReservationStatus_EventReservationStatusID" />
+          <ScalarProperty Name="ReservationDate" ColumnName="ReservationDate" />
+          <ScalarProperty Name="ReservationPrice" ColumnName="ReservationPrice" />
+          <ScalarProperty Name="IsFullTable" ColumnName="IsFullTable" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ReservationType_EventReservationTypeID" ColumnName="ReservationType_EventReservationTypeID" />
+          <ScalarProperty Name="ExternalID" ColumnName="ExternalID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventReservationStatus">
+      <EntityTypeMapping TypeName="sdmac_2010Model.EventReservationStatu">
+        <MappingFragment StoreEntitySet="EventReservationStatus">
+          <ScalarProperty Name="EventReservationStatusID" ColumnName="EventReservationStatusID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventReservationTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.EventReservationType">
+        <MappingFragment StoreEntitySet="EventReservationTypes">
+          <ScalarProperty Name="EventReservationTypeID" ColumnName="EventReservationTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DefaultPrice" ColumnName="DefaultPrice" />
+          <ScalarProperty Name="DefaultAllowPayAtDoor" ColumnName="DefaultAllowPayAtDoor" />
+          <ScalarProperty Name="DefaultPayAtDoorPrice" ColumnName="DefaultPayAtDoorPrice" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CustomName" ColumnName="CustomName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Event">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StartOn" ColumnName="StartOn" />
+          <ScalarProperty Name="EndOn" ColumnName="EndOn" />
+          <ScalarProperty Name="LocationAddress_AddressID" ColumnName="LocationAddress_AddressID" />
+          <ScalarProperty Name="MaxAttendees" ColumnName="MaxAttendees" />
+          <ScalarProperty Name="EventImage" ColumnName="EventImage" />
+          <ScalarProperty Name="PDF" ColumnName="PDF" />
+          <ScalarProperty Name="ViewOnly" ColumnName="ViewOnly" />
+          <ScalarProperty Name="PastGuestSpeaker" ColumnName="PastGuestSpeaker" />
+          <ScalarProperty Name="Status_EventStatusTypeID" ColumnName="Status_EventStatusTypeID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ExternalID" ColumnName="ExternalID" />
+          <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventStatusTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.EventStatusType">
+        <MappingFragment StoreEntitySet="EventStatusTypes">
+          <ScalarProperty Name="EventStatusTypeID" ColumnName="EventStatusTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GuestStatus">
+      <EntityTypeMapping TypeName="sdmac_2010Model.GuestStatu">
+        <MappingFragment StoreEntitySet="GuestStatus">
+          <ScalarProperty Name="GuestStatusID" ColumnName="GuestStatusID" />
+          <ScalarProperty Name="GuestStatusName" ColumnName="GuestStatusName" />
+          <ScalarProperty Name="ShowInList" ColumnName="ShowInList" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ReservationType_EventReservationTypeID" ColumnName="ReservationType_EventReservationTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotLists">
+      <EntityTypeMapping TypeName="sdmac_2010Model.HotList">
+        <MappingFragment StoreEntitySet="HotList">
+          <ScalarProperty Name="HotlistID" ColumnName="HotlistID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="StartOn" ColumnName="StartOn" />
+          <ScalarProperty Name="EndOn" ColumnName="EndOn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HotlistImage" ColumnName="HotlistImage" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedOn_UserID" ColumnName="CreatedOn_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageFormatTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.MessageFormatType">
+        <MappingFragment StoreEntitySet="MessageFormatTypes">
+          <ScalarProperty Name="MessageFormatTypeID" ColumnName="MessageFormatTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Newsletters">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Newsletter">
+        <MappingFragment StoreEntitySet="Newsletters">
+          <ScalarProperty Name="NewsletterID" ColumnName="NewsletterID" />
+          <ScalarProperty Name="Type_NewsTypeID" ColumnName="Type_NewsTypeID" />
+          <ScalarProperty Name="Event_EventID" ColumnName="Event_EventID" />
+          <ScalarProperty Name="OccurredOn" ColumnName="OccurredOn" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PDFDocument" ColumnName="PDFDocument" />
+          <ScalarProperty Name="DocumentSource" ColumnName="DocumentSource" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="DocumentThumb" ColumnName="DocumentThumb" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ExternalID" ColumnName="ExternalID" />
+          <ScalarProperty Name="PDFDocumentName" ColumnName="PDFDocumentName" />
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.NewsType">
+        <MappingFragment StoreEntitySet="NewsTypes">
+          <ScalarProperty Name="NewsTypeID" ColumnName="NewsTypeID" />
+          <ScalarProperty Name="NewsType_Name" ColumnName="NewsType_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PageTemplates">
+      <EntityTypeMapping TypeName="sdmac_2010Model.PageTemplate">
+        <MappingFragment StoreEntitySet="PageTemplate">
+          <ScalarProperty Name="PageTemplateID" ColumnName="PageTemplateID" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="FriendlyName" ColumnName="FriendlyName" />
+          <ScalarProperty Name="TemplateContent" ColumnName="TemplateContent" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ExternalNumber" ColumnName="ExternalNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentStatus">
+      <EntityTypeMapping TypeName="sdmac_2010Model.PaymentStatu">
+        <MappingFragment StoreEntitySet="PaymentStatus">
+          <ScalarProperty Name="PaymentStatusID" ColumnName="PaymentStatusID" />
+          <ScalarProperty Name="PaymentStatusName" ColumnName="PaymentStatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTransactions">
+      <EntityTypeMapping TypeName="sdmac_2010Model.PaymentTransaction">
+        <MappingFragment StoreEntitySet="PaymentTransactions">
+          <ScalarProperty Name="PaymentTransactionID" ColumnName="PaymentTransactionID" />
+          <ScalarProperty Name="Type_PaymentTransactionTypeID" ColumnName="Type_PaymentTransactionTypeID" />
+          <ScalarProperty Name="Accounts_AccountID" ColumnName="Accounts_AccountID" />
+          <ScalarProperty Name="Reservation_EventReservationID" ColumnName="Reservation_EventReservationID" />
+          <ScalarProperty Name="TransactionNumber" ColumnName="TransactionNumber" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTransactionTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.PaymentTransactionType">
+        <MappingFragment StoreEntitySet="PaymentTransactionTypes">
+          <ScalarProperty Name="PaymentTransactionTypeID" ColumnName="PaymentTransactionTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Photo">
+        <MappingFragment StoreEntitySet="Photos">
+          <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
+          <ScalarProperty Name="Active" ColumnName="Photo_IsActive" />
+          <ScalarProperty Name="PhotoDate" ColumnName="PhotoDate" />
+          <ScalarProperty Name="PhotoTitle" ColumnName="PhotoTitle" />
+          <ScalarProperty Name="PhotoDescription" ColumnName="PhotoDescription" />
+          <ScalarProperty Name="PhotoImage" ColumnName="PhotoImage" />
+          <ScalarProperty Name="ImageSize" ColumnName="ImageSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="sdmac_2010Model.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MemberPrice" ColumnName="MemberPrice" />
+          <ScalarProperty Name="NonMemberPrice" ColumnName="NonMemberPrice" />
+          <ScalarProperty Name="ShippingAndHandling" ColumnName="ShippingAndHandling" />
+          <ScalarProperty Name="RequireShippingAddress" ColumnName="RequireShippingAddress" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedOn_UserID" ColumnName="ModifiedOn_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RewriteRules">
+      <EntityTypeMapping TypeName="sdmac_2010Model.RewriteRule">
+        <MappingFragment StoreEntitySet="RewriteRules">
+          <ScalarProperty Name="RewriteRuleID" ColumnName="RewriteRuleID" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Rewrite" ColumnName="Rewrite" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesOrderDetails">
+      <EntityTypeMapping TypeName="sdmac_2010Model.SalesOrderDetail">
+        <MappingFragment StoreEntitySet="SalesOrderDetails">
+          <ScalarProperty Name="SalesOrderDetailID" ColumnName="SalesOrderDetailID" />
+          <ScalarProperty Name="SalesOrder_SalesOrderID" ColumnName="SalesOrder_SalesOrderID" />
+          <ScalarProperty Name="OccurredOn" ColumnName="OccurredOn" />
+          <ScalarProperty Name="Product_ProductID" ColumnName="Product_ProductID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesOrders">
+      <EntityTypeMapping TypeName="sdmac_2010Model.SalesOrder">
+        <MappingFragment StoreEntitySet="SalesOrders">
+          <ScalarProperty Name="SalesOrderID" ColumnName="SalesOrderID" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+          <ScalarProperty Name="ShipToAddress_AddressID" ColumnName="ShipToAddress_AddressID" />
+          <ScalarProperty Name="Status_SalesOrderStatusTypeID" ColumnName="Status_SalesOrderStatusTypeID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ShippingAndHandling" ColumnName="ShippingAndHandling" />
+          <ScalarProperty Name="TransactionNumber" ColumnName="TransactionNumber" />
+          <ScalarProperty Name="OccurredOn" ColumnName="OccurredOn" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesOrderStatusTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.SalesOrderStatusType">
+        <MappingFragment StoreEntitySet="SalesOrderStatusTypes">
+          <ScalarProperty Name="SalesOrderStatusTypeID" ColumnName="SalesOrderStatusTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="sdmac_2010Model.State">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemConstants">
+      <EntityTypeMapping TypeName="sdmac_2010Model.SystemConstant">
+        <MappingFragment StoreEntitySet="SystemConstants">
+          <ScalarProperty Name="SystemConstantID" ColumnName="SystemConstantID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ConstantValue" ColumnName="ConstantValue" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemTransactions">
+      <EntityTypeMapping TypeName="sdmac_2010Model.SystemTransaction">
+        <MappingFragment StoreEntitySet="SystemTransactions">
+          <ScalarProperty Name="SystemTransactionID" ColumnName="SystemTransactionID" />
+          <ScalarProperty Name="Type_SystemTransactionTypeID" ColumnName="Type_SystemTransactionTypeID" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+          <ScalarProperty Name="Album_AlbumID" ColumnName="Album_AlbumID" />
+          <ScalarProperty Name="Alert_AlertID" ColumnName="Alert_AlertID" />
+          <ScalarProperty Name="Payment_PaymentTransactionID" ColumnName="Payment_PaymentTransactionID" />
+          <ScalarProperty Name="SystemMessage" ColumnName="SystemMessage" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemTransactionTypes">
+      <EntityTypeMapping TypeName="sdmac_2010Model.SystemTransactionType">
+        <MappingFragment StoreEntitySet="SystemTransactionTypes">
+          <ScalarProperty Name="SystemTransactionTypeID" ColumnName="SystemTransactionTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRights">
+      <EntityTypeMapping TypeName="sdmac_2010Model.UserRight">
+        <MappingFragment StoreEntitySet="UserRights">
+          <ScalarProperty Name="UserRightID" ColumnName="UserRightID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BitNo" ColumnName="BitNo" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn_UserID" ColumnName="ModifiedOn_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="sdmac_2010Model.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PermissionBit" ColumnName="PermissionBit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="sdmac_2010Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserLoginName" ColumnName="UserLoginName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserUserRoles">
+      <EntityTypeMapping TypeName="sdmac_2010Model.UserUserRole">
+        <MappingFragment StoreEntitySet="UserUserRoles">
+          <ScalarProperty Name="UserUserRoleID" ColumnName="UserUserRoleID" />
+          <ScalarProperty Name="User_UserID" ColumnName="User_UserID" />
+          <ScalarProperty Name="UserRole_UserRoleID" ColumnName="UserRole_UserRoleID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn_UserID" ColumnName="ModifiedOn_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VirtualPages">
+      <EntityTypeMapping TypeName="sdmac_2010Model.VirtualPage">
+        <MappingFragment StoreEntitySet="VirtualPage">
+          <ScalarProperty Name="VirtualPageID" ColumnName="VirtualPageID" />
+          <ScalarProperty Name="Template_PageTemplateID" ColumnName="Template_PageTemplateID" />
+          <ScalarProperty Name="MemberOf_VirtualPageID" ColumnName="MemberOf_VirtualPageID" />
+          <ScalarProperty Name="IsTemplate" ColumnName="IsTemplate" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PageContent" ColumnName="PageContent" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy_UserID" ColumnName="CreatedBy_UserID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy_UserID" ColumnName="ModifiedBy_UserID" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
